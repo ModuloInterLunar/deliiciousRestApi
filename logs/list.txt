@@ -1,2 +1,31 @@
 Requested path: /
 Requested path: /favicon.ico
+Requested path: /tables
+Requested path: /tables
+Requested path: /tables/1
+Requested path: /tables/1
+Requested path: /tables
+Requested path: /tables/1
+Requested path: /tables
+Requested path: /tables
+Requested path: /tables
+Requested path: /tables
+Requested path: /tables
+Requested path: /tables
+Requested path: /tables
+Requested path: /tables
+Requested path: /tables
+Requested path: /tables/1
+Requested path: /tables/1
+Requested path: /tables/1
+Requested path: /tables/1
+Requested path: /tables/1 | Method: DELETE
+Requested path: /tables | Method: POST
+Requested path: /tables/1 | Method: DELETE
+Requested path: /tables | Method: GET
+Requested path: /tables | Method: POST
+Requested path: /tables | Method: POST
+Requested path: /tables | Method: POST
+Requested path: /tables | Method: GET
+Requested path: /tables/1 | Method: PATCH
+Requested path: /api/tables | Method: GET
