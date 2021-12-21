@@ -1,10 +1,11 @@
 const fs = require('fs');
 const logFile = 'logs/list.txt';
 
-const logPetition = (path) => {
+const logPetition = (req) => {
     const file = fs.createWriteStream(logFile, {'flags':'a'})
-    const text = `Requested path: ${path}\n`;
-    file.write(text)
+    const text = `Requested path: ${req.path} | Method: ${req.method}\n`;
+    console.log(text);
+    file.write(text);
 }
 
 exports.logPetition = logPetition;
