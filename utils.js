@@ -1,5 +1,5 @@
 const fs = require('fs');
-const logFile = 'logs/list.txt';
+const logFile = 'logs/list.log';
 
 const logPetition = (req) => {
     const file = fs.createWriteStream(logFile, {'flags':'a'})
