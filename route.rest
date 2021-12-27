@@ -1,0 +1,32 @@
+GET http://localhost:8080/api/tables
+
+###
+
+GET http://localhost:8080/api/tables/1
+
+
+###
+
+
+POST http://localhost:8080/api/tables
+Content-Type: application/json
+
+{
+    "_id": 5,
+    "posX": 0.546,
+    "posY": 0.4215
+}
+
+
+###
+
+DELETE http://localhost:8080/api/tables/1
+
+###
+
+PATCH http://localhost:8080/api/tables/5
+Content-Type: application/json
+
+{
+    "posY": 0.421
+}
