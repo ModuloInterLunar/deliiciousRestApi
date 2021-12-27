@@ -12,9 +12,9 @@ POST http://localhost:8080/api/tables
 Content-Type: application/json
 
 {
-    "_id": 1,
-    "posX": 50.4987,
-    "posY": 12.421
+    "_id": 5,
+    "posX": 0.546,
+    "posY": 0.4215
 }
 
 
@@ -24,7 +24,7 @@ DELETE http://localhost:8080/api/tables/1
 
 ###
 
-PATCH http://localhost:8080/api/tables/1
+PATCH http://localhost:8080/api/tables/5
 Content-Type: application/json
 
 {

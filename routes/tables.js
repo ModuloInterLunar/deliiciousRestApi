@@ -58,6 +58,7 @@ router.delete('/:id', getTable, async (req, res) => {
 });
 
 async function getTable(req, res, next) {
+    let table;
     try {
         table = await Table.findById(req.params.id);
         if (!table) {

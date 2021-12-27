@@ -4,7 +4,7 @@ const express = require('express');
 const utils = require('./utils');
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true }); // mongodb://localhost/deliicious
 const db = mongoose.connection;
 const app = express();
 const port = 8080;
@@ -14,7 +14,6 @@ db.once('open', () => console.log('Connected to Database'));
 
 // Middleware
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
 app.use((req, res, next) => {
     utils.logPetition(req);
     next();
