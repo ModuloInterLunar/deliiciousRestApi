@@ -22,7 +22,9 @@ router.post('/', async (req, res) => {
     const table = new Table({
         _id: req.body._id,
         posX: req.body.posX,
-        posY: req.body.posY 
+        posY: req.body.posY,
+        width: req.body.width,
+        height: req.body.height
     });
 
     try {
@@ -38,6 +40,8 @@ router.patch('/:id', getTable, async (req, res) => {
     if (req.body._id) res.table._id = req.body._id;
     if (req.body.posX) res.table.posX = req.body.posX;
     if (req.body.posY) res.table.posY = req.body.posY;
+    if(req.body.width) res.table.width = req.body.width;
+    if(req.body.height) res.table.height = req.body.height;
 
     try {
         const updatedTable = await res.table.save();
