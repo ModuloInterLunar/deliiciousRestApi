@@ -22,9 +22,4 @@ app.use((req, res, next) => {
 const tablesRouter = require('./routes/tables');
 app.use('/api/tables', tablesRouter);
 
-// Get methods
-app.get('*', (req, res) => {
-    res.send('Path not defined.');
-});
-
 app.listen(port, () => console.log("Server Started"));
