@@ -14,7 +14,9 @@ Content-Type: application/json
 {
     "_id": 5,
     "posX": 0.546,
-    "posY": 0.4215
+    "posY": 0.4215,
+    "width": 45,
+    "height": 12
 }
 
 

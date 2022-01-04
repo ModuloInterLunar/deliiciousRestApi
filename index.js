@@ -19,7 +19,9 @@ app.use((req, res, next) => {
     next();
 });
 
-const tablesRouter = require('./routes/tables');
+const tablesRouter = require('./routes/api/tables');
 app.use('/api/tables', tablesRouter);
+const authRouter = require('./routes/auth');
+app.use('/auth', authRouter);
 
 app.listen(port, () => console.log("Server Started"));
