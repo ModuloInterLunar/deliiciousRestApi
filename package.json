@@ -21,6 +21,8 @@
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "moment": "^2.29.1",
     "mongoose": "^6.1.2",
     "nodemon": "^2.0.15"
   }
