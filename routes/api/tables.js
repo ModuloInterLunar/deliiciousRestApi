@@ -20,7 +20,7 @@ router.get('/:id', getTable, async (req, res) => {
 // Create One
 router.post('/', async (req, res) => {
     const table = new Table({
-        _id: req.body._id,
+        _id: req.body.id,
         posX: req.body.posX,
         posY: req.body.posY,
         width: req.body.width,
@@ -37,7 +37,7 @@ router.post('/', async (req, res) => {
 
 // Updating One
 router.patch('/:id', getTable, async (req, res) => {
-    if (req.body._id) res.table._id = req.body._id;
+    if (req.body._id) res.table._id = req.body.id;
     if (req.body.posX) res.table.posX = req.body.posX;
     if (req.body.posY) res.table.posY = req.body.posY;
     if (req.body.width) res.table.width = req.body.width;

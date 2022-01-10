@@ -23,7 +23,7 @@ router.get('/:id', getEmployee, async (req, res) => {
 router.post('/', isUsernameUnique, isStrongPassword, async (req, res) => {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     const employee = new Employee({
-        _id: req.body._id,
+        _id: req.body.id,
         username: req.body.username,
         dni: req.body.dni,
         name: req.body.name,
@@ -36,6 +36,7 @@ router.post('/', isUsernameUnique, isStrongPassword, async (req, res) => {
         const newEmployee = await employee.save();
         res.status(201).json(newEmployee);
     } catch (err) {
+        console.log(err.message);
         res.status(400).json({ message: err.message});
     }
 });
@@ -43,7 +44,7 @@ router.post('/', isUsernameUnique, isStrongPassword, async (req, res) => {
 // Updating One
 router.patch('/:id', isUsernameUnique, isStrongPassword, getEmployee, async (req, res) => {
 
-    if (req.body._id) res.employee._id = req.body._id;
+    if (req.body._id) res.employee._id = req.body.id;
     if (req.body.username) res.employee.username = req.body.username;
     if (req.body.password) res.employee.password = await bcrypt.hash(req.body.password, 10);
     if (req.body.dni) res.employee.dni = req.body.dni;

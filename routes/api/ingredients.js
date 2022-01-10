@@ -20,9 +20,9 @@ router.get('/:id', getIngredient, async (req, res) => {
 // Create One
 router.post('/', async (req, res) => {
     const ingredient = new Ingredient({
-        _id: req.body._id,
-        posX: req.body.posX,
-        posY: req.body.posY 
+        _id: req.body.id,
+        price: req.body.price,
+        quantity: req.body.quantity 
     });
 
     try {
@@ -35,7 +35,7 @@ router.post('/', async (req, res) => {
 
 // Updating One
 router.patch('/:id', getIngredient, async (req, res) => {
-    if (req.body._id) res.ingredient._id = req.body._id;
+    if (req.body._id) res.ingredient._id = req.body.id;
     if (req.body.price) res.ingredient.price = req.body.price;
     if (req.body.quantity) res.ingredient.quantity = req.body.quantity;
 
