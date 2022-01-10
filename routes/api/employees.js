@@ -3,6 +3,7 @@ const router = express.Router();
 const Employee = require('../../models/employee');
 const service = require('../../services');
 const bcrypt = require('bcrypt');
+const { assert } = require('console');
 
 // Get all
 router.get('/', async (req, res) => {
@@ -23,7 +24,7 @@ router.get('/:id', getEmployee, async (req, res) => {
 router.post('/', isUsernameUnique, isStrongPassword, async (req, res) => {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     const employee = new Employee({
-        _id: req.body.id,
+        id: req.body.id,
         username: req.body.username,
         dni: req.body.dni,
         name: req.body.name,
@@ -42,16 +43,17 @@ router.post('/', isUsernameUnique, isStrongPassword, async (req, res) => {
 });
 
 // Updating One
-router.patch('/:id', isUsernameUnique, isStrongPassword, getEmployee, async (req, res) => {
-
-    if (req.body._id) res.employee._id = req.body.id;
+router.patch('/:id', isUsernameUnique, getEmployee, async (req, res) => {
+    console.assert(req.body.id);
+    console.log(req.body.id);
+    if (req.body.id) res.employee._id = req.body.id;
     if (req.body.username) res.employee.username = req.body.username;
     if (req.body.password) res.employee.password = await bcrypt.hash(req.body.password, 10);
     if (req.body.dni) res.employee.dni = req.body.dni;
     if (req.body.name) res.employee.name = req.body.name;
     if (req.body.surname) res.employee.surname = req.body.surname;
     if (req.body.isAdmin) res.employee.isAdmin = req.body.isAdmin;
-
+    console.log(res.employee.id);
     try {
         const updatedEmployee = await res.employee.save();
         res.json(updatedEmployee);

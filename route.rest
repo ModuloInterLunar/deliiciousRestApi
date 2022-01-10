@@ -56,11 +56,11 @@ Content-Type: application/json
 
 ###
 
-PATCH http://localhost:8080/api/employees/20
+PATCH http://localhost:8080/api/employees/2
 Content-Type: application/json
 
 {
-    "password": "asdfas"
+    "id": "5"
 }
 
 ###
