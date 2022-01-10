@@ -1,6 +1,6 @@
-const express = require('express')
+const express = require('express');
 const router = express.Router();
-const Table = require('../models/table');
+const Table = require('../../models/table');
 
 // Get all
 router.get('/', async (req, res) => {
@@ -40,8 +40,8 @@ router.patch('/:id', getTable, async (req, res) => {
     if (req.body._id) res.table._id = req.body._id;
     if (req.body.posX) res.table.posX = req.body.posX;
     if (req.body.posY) res.table.posY = req.body.posY;
-    if(req.body.width) res.table.width = req.body.width;
-    if(req.body.height) res.table.height = req.body.height;
+    if (req.body.width) res.table.width = req.body.width;
+    if (req.body.height) res.table.height = req.body.height;
 
     try {
         const updatedTable = await res.table.save();

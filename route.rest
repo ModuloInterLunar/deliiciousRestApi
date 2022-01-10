@@ -1,4 +1,5 @@
 GET http://localhost:8080/api/tables
+authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMiIsImlhdCI6MTY0MTQ5MzQxOCwiZXhwIjoxNjQxNTM2NjE4fQ.8bU1zdRsnbAah4u0lHOhR2X0lR_g4kZEB7BtmnXa1m8
 
 ###
 
@@ -14,7 +15,9 @@ Content-Type: application/json
 {
     "_id": 5,
     "posX": 0.546,
-    "posY": 0.4215
+    "posY": 0.4215,
+    "width": 45,
+    "height": 12
 }
 
 
@@ -29,4 +32,43 @@ Content-Type: application/json
 
 {
     "posY": 0.421
+}
+
+###
+
+GET http://localhost:8080/api/employees
+
+
+###
+
+POST http://localhost:8080/api/employees
+Content-Type: application/json
+
+{
+    "_id": 20,
+    "password": "aaa",
+    "username": "asdfdd",
+    "dni": "45454545D",
+    "name": "Juan",
+    "surname": "Del Río",
+    "isAdmin": true
+}
+
+###
+
+PATCH http://localhost:8080/api/employees/20
+Content-Type: application/json
+
+{
+    "password": "asdfas"
+}
+
+###
+
+POST http://localhost:8080/api/employees/login
+Content-Type: application/json
+
+{
+    "username": "minie",
+    "password": "aaa"
 }
