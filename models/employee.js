@@ -10,4 +10,6 @@ const employeeSchema = new mongoose.Schema({
     isAdmin: { type: Boolean, required: true }
 });
 
+employeeSchema.virtual('id').get(() => this._id);
+
 module.exports = mongoose.model('Employee', employeeSchema);
