@@ -1,29 +1,19 @@
 {
   "name": "deliiciousrestapi",
-  "version": "1.0.0",
-  "description": "Rest api",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon index.js"
+    "start": "npx nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ModuloInterLunar/deliiciousRestApi.git"
-  },
-  "author": "ModuloInterLunar",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ModuloInterLunar/deliiciousRestApi/issues"
-  },
-  "homepage": "https://github.com/ModuloInterLunar/deliiciousRestApi#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^11.0.0",
+    "express": "~4.16.1",
     "jwt-simple": "^0.5.6",
     "moment": "^2.29.1",
-    "mongoose": "^6.1.2",
-    "nodemon": "^2.0.15"
+    "mongoose": "^6.1.6",
+    "morgan": "~1.9.1"
   }
 }

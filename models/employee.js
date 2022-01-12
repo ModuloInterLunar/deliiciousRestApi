@@ -1,10 +1,21 @@
 const mongoose = require('mongoose');
 
-const opts = { toJSON: { virtuals: true } };
+const opts = { 
+    toJSON: { virtuals: true },
+    timestamps: true
+};
+
 const employeeSchema = new mongoose.Schema({
     _id: { type: String, required: true },
-    username: { type: String, required: true},
-    dni: {type: String, required: true},
+    username: { type: String, required: true, unique: [true, "username already in use"] },
+    dni: {
+        type: String,
+        required: true,
+        unique: true,
+        validate: v => {
+            return /(\d{8}[A-Z])|([XYZ]\d{7}[A-Z])/.test(v);
+        }
+    },
     name: { type: String, required: true },
     surname: { type: String, required: true },
     password: { type: String, required: true },
@@ -12,7 +23,6 @@ const employeeSchema = new mongoose.Schema({
 }, opts);
 
 // We use the virtual to assign and get the id to "_id"
-employeeSchema.virtual('id').get(() => this._id)
-                            .set(v => this._id = v);
+employeeSchema.virtual('id').get(() => this._id);
 
 module.exports = mongoose.model('Employee', employeeSchema);

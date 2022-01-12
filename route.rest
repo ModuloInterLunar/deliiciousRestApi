@@ -1,9 +1,10 @@
 GET http://localhost:8080/api/tables
-authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMiIsImlhdCI6MTY0MTQ5MzQxOCwiZXhwIjoxNjQxNTM2NjE4fQ.8bU1zdRsnbAah4u0lHOhR2X0lR_g4kZEB7BtmnXa1m8
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMCIsImlhdCI6MTY0MTgzNzM1OSwiZXhwIjoxNjQxODgwNTU5fQ.6XbxavCZ_-p9zjVGN6ezyP0888jK8F1L_lLssvgsvyU
 
 ###
 
 GET http://localhost:8080/api/tables/1
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMCIsImlhdCI6MTY0MTgzNzM1OSwiZXhwIjoxNjQxODgwNTU5fQ.6XbxavCZ_-p9zjVGN6ezyP0888jK8F1L_lLssvgsvyU
 
 
 ###
@@ -11,9 +12,10 @@ GET http://localhost:8080/api/tables/1
 
 POST http://localhost:8080/api/tables
 Content-Type: application/json
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMCIsImlhdCI6MTY0MTgzNzM1OSwiZXhwIjoxNjQxODgwNTU5fQ.6XbxavCZ_-p9zjVGN6ezyP0888jK8F1L_lLssvgsvyU
 
 {
-    "_id": 5,
+    "id": 5,
     "posX": 0.546,
     "posY": 0.4215,
     "width": 45,
@@ -23,7 +25,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8080/api/tables/1
+DELETE http://localhost:8080/api/employees/4
 
 ###
 
@@ -45,12 +47,11 @@ POST http://localhost:8080/api/employees
 Content-Type: application/json
 
 {
-    "_id": 20,
-    "password": "aaa",
-    "username": "asdfdd",
+    "password": "asdaaaaaa",
+    "username": "aasdfasasdf",
     "dni": "45454545D",
-    "name": "Juan",
-    "surname": "Del Río",
+    "name": "dd",
+    "surname": "Nuevo",
     "isAdmin": true
 }
 
@@ -60,15 +61,15 @@ PATCH http://localhost:8080/api/employees/2
 Content-Type: application/json
 
 {
-    "id": "5"
+    "username": "juan"
 }
 
 ###
 
-POST http://localhost:8080/api/employees/login
+POST http://localhost:8080/login
 Content-Type: application/json
 
 {
-    "username": "minie",
-    "password": "aaa"
+    "username": "djessy",
+    "password": "aaaaaa"
 }

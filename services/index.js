@@ -1,13 +1,9 @@
-require('dotenv').config();
-
 const jwt = require('jwt-simple');
 const moment = require('moment');
-const fs = require('fs');
-const logFile = 'logs/list.log';
 
 function createToken (user) {
     const payload = {
-        sub: user._id,
+        sub: user.id,
         iat: moment().unix(),
         exp: moment().add(12, 'hours').unix()
     }
@@ -39,16 +35,8 @@ function decodeToken (token) {
     return decoded;
 }
 
-const logPetition = (req) => {
-    const text = `Requested path: ${req.path} | Method: ${req.method}\n`;
-    fs.appendFile(logFile, text, err => {
-        if (err) console.log(err);
-        console.log(text);
-    });
-}
 
 module.exports = {
     createToken,
-    decodeToken,
-    logPetition
+    decodeToken
 };

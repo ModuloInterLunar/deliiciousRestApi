@@ -15,4 +15,6 @@ Después, solo tenéis que usar `npm start` para iniciarlo.
 
 Nota: no os irá sin haber creado la base de datos en vuestro equipo
 
+Recomendación: para distinguir mejor las carpetas, descargad os la extensión 'pkief.material-icon-theme' (u otra similar)
+
 ### End
