@@ -17,5 +17,4 @@ router.patch('/:id', getTable, updateOne);
 router.delete('/:id', getTable, deleteOne);
 
 
-
 module.exports = router;

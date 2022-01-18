@@ -73,3 +73,30 @@ Content-Type: application/json
     "username": "djessy",
     "password": "aaaaaa"
 }
+
+###
+
+GET http://localhost:8080/api/ingredients
+
+###
+
+POST http://localhost:8080/api/ingredients
+Content-Type: application/json
+
+{
+    "name": "sal",
+    "price": 1.0,
+    "quantity": 3.0
+}
+
+###
+
+PATCH http://localhost:8080/api/ingredients/1
+Content-Type: application/json
+
+{
+    "name": "azucar"
+}
+
+###
+DELETE http://localhost:8080/api/ingredients/sal
