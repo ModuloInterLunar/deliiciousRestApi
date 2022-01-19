@@ -17,6 +17,7 @@ const createOne = async (req, res) => {
 
     try {
         const newEmployee = await employee.save();
+        newEmployee.password = "";
         res.status(201).json(newEmployee);
     } catch (err) {
         console.log(err.message);
