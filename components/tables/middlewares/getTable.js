@@ -1,3 +1,5 @@
+const Table = require('../../../models/table');
+
 const getTable = async (req, res, next) => {
     let table;
     try {

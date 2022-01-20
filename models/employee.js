@@ -22,7 +22,7 @@ const employeeSchema = new mongoose.Schema({
     isAdmin: { type: Boolean, required: true }
 }, opts);
 
-// We use the virtual to assign and get the id to "_id"
+// We use the virtual to get the _id as id
 employeeSchema.virtual('id').get(() => this._id);
 
 module.exports = mongoose.model('Employee', employeeSchema);

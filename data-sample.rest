@@ -1,0 +1,37 @@
+GET http://localhost:8080/api/tables
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTgiLCJpYXQiOjE2NDI2MTY3MDMsImV4cCI6MTY0MjY1OTkwM30.voOVns0_ORFv9-xkgBYYd2sviGq1elz0OFKbt23zjls
+
+
+###
+
+DELETE http://localhost:8080/api/tables/5
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTgiLCJpYXQiOjE2NDI2MTY3MDMsImV4cCI6MTY0MjY1OTkwM30.voOVns0_ORFv9-xkgBYYd2sviGq1elz0OFKbt23zjls
+
+###
+
+POST http://localhost:8080/api/tables
+Content-Type: application/json
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTgiLCJpYXQiOjE2NDI2MTY3MDMsImV4cCI6MTY0MjY1OTkwM30.voOVns0_ORFv9-xkgBYYd2sviGq1elz0OFKbt23zjls
+
+{
+    "id": 4,
+    "posX": 0.10,
+    "posY": 0.10,
+    "width": 25,
+    "height": 25
+}
+
+###
+
+POST http://localhost:8080/api/tables
+Content-Type: application/json
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTgiLCJpYXQiOjE2NDI2MTY3MDMsImV4cCI6MTY0MjY1OTkwM30.voOVns0_ORFv9-xkgBYYd2sviGq1elz0OFKbt23zjls
+
+
+{
+    "id": 5,
+    "posX": "0.40",
+    "posY": "0.40",
+    "width": 25,
+    "height": 25
+}
