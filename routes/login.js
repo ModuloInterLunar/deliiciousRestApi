@@ -3,7 +3,9 @@ const Employee = require('../models/employee');
 const bcrypt = require('bcrypt');
 
 const login = (req,res) => {
-    Employee.findOne({ username: req.body.username }, async (err, employee) => {
+    const username = req.body.username;
+    Employee.findOne({ "username": {
+        $regex : new RegExp(username, "i") } }, async (err, employee) => {
         if (err) return res.status(500).send({ message: err });
         if (!employee) return res.status(404).json({ message: "Employee not found!"});
         req.employee = employee;
