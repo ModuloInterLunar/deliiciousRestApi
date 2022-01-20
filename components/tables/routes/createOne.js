@@ -8,7 +8,8 @@ const createOne = async (req, res) => {
         posX: req.body.posX,
         posY: req.body.posY,
         width: req.body.width,
-        height: req.body.height
+        height: req.body.height,
+        actualTicket: req.body.actualTicket
     });
 
     try {

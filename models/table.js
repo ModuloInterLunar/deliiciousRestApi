@@ -8,8 +8,9 @@ const tableSchema = new mongoose.Schema({
     _id: { type: String, required: 'Id is required!' },
     posX: { type: Number, required: 'PosX is required!' },
     posY: { type: Number, required: 'PosY is required!' },
-    width: {type: Number, required: 'Width is required!'},
-    height: {type: Number, required: 'Height is required!'}
+    width: { type: Number, required: 'Width is required!' },
+    height: { type: Number, required: 'Height is required!' },
+    actualTicket: { type: String, unique: true, sparse: true }
 }, opts);
 
 tableSchema.virtual('id').get(() => this._id);
