@@ -46,8 +46,9 @@ Content-Type: application/json
 Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
 
 {
-    "password": "asdaaaaaa",
-    "username": "aasdfasasdf",
+    "password": "12345",
+    "username": "matalacabras",
+    "name": "mataas",
     "dni": "45454545D",
     "surname": "Nuevo",
     "isAdmin": true
@@ -68,7 +69,7 @@ POST http://localhost:8080/login
 Content-Type: application/json
 
 {
-    "username": "alvaro",
+    "username": "matalacabras",
     "password": "12345"
 }
 
@@ -129,3 +130,22 @@ Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhd
 ###
 DELETE http://localhost:8080/api/tickets/1
 Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
+
+
+###
+PATCH http://localhost:8080/api/orders/2
+Content-Type: application/json
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzAyNzYwLCJleHAiOjE2NDI3NDU5NjB9.Cn9QiXDxZCACmjCFBs-9_qKAYWbp5_T4YLIWnl21AIQ
+
+{
+    "ticket": "no",
+    "dish": "carne",
+    "hasBeenServed": false,
+    "employee": "paco"
+}
+
+
+###
+PATCH http://localhost:8080/api/orders/
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzAyNzYwLCJleHAiOjE2NDI3NDU5NjB9.Cn9QiXDxZCACmjCFBs-9_qKAYWbp5_T4YLIWnl21AIQ
+

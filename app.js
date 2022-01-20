@@ -19,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 const tablesRouter = require('./components/tables');
 const employeesRouter = require('./components/employees');
 const ticketsRouter = require('./components/tickets');
+const ordersRouter = require('./components/orders');
 const ingredientsRouter = require('./components/ingredients');
 const login = require('./routes/login');
 
@@ -38,6 +39,7 @@ app.use(auth);
 app.use('/api/employees', employeesRouter);
 app.use('/api/tables', tablesRouter);
 app.use('/api/tickets', ticketsRouter);
+app.use('/api/orders', ordersRouter);
 app.use('/api/ingredients', ingredientsRouter);
 
 module.exports = app;

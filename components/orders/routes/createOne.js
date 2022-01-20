@@ -1,0 +1,26 @@
+const Order = require('../../../models/order');
+const services = require('../../../mongoose/services');
+
+const createOne = async (req, res) => {
+    if (!req.body.id) req.body.id = await services.generateId(Order);
+    const order = new Order({
+        _id: req.body.id,
+        ticket: req.body.ticket,
+        dish: req.body.dish,
+        hasBeenCoocked: req.body.hasBeenCoocked,
+        hasBeenServed: req.body.hasBeenServed,
+        isIncluded: req.body.isIncluded,
+        description: req.body.description,
+        employee: req.body.employee
+    });
+
+    try {
+        const newOrder = await order.save();
+        res.status(201).json(newOrder);
+    } catch (err) {
+        console.log(err.message);
+        res.status(400).json({ message: err.message});
+    }
+}
+
+module.exports = createOne;
