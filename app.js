@@ -32,7 +32,7 @@ app.use('/login', login);
  * Needs auth
  */
 
-// app.use(auth);
+app.use(auth);
 
 app.use('/api/employees', employeesRouter);
 app.use('/api/tables', tablesRouter);
