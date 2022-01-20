@@ -5,10 +5,10 @@ const opts = {
 };
 
 const ingredientSchema = new mongoose.Schema({
-    _id: { type: String, required: true },
-    name: { type: String, required: true, unique: true},
-    price: { type: Number, required: true },
-    quantity: { type: Number, required: true }
+    _id: { type: String, required: 'Id is required!' },
+    name: { type: String, required: 'Name is required!', unique: 'Name already in use!'},
+    price: { type: Number, required: 'Price is required!' },
+    quantity: { type: Number, required: 'Quantity is required!' }
 }, opts);
 ingredientSchema.virtual('id').get(() => this._id);
 

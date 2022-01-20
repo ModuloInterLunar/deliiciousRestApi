@@ -5,11 +5,11 @@ const opts = {
 };
 
 const tableSchema = new mongoose.Schema({
-    _id: { type: String, required: true },
-    posX: { type: Number, required: true },
-    posY: { type: Number, required: true },
-    width: {type: Number, required: true},
-    height: {type: Number, required: true}
+    _id: { type: String, required: 'Id is required!' },
+    posX: { type: Number, required: 'PosX is required!' },
+    posY: { type: Number, required: 'PosY is required!' },
+    width: {type: Number, required: 'Width is required!'},
+    height: {type: Number, required: 'Height is required!'}
 }, opts);
 
 tableSchema.virtual('id').get(() => this._id);

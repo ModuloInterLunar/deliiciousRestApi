@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const getTable = require('./middlewares/getTable');
+const getTicket = require('./middlewares/getTicket');
 
 const getAll = require('./routes/getAll');
 const getOne = require('./routes/getOne');
@@ -9,11 +9,10 @@ const createOne = require('./routes/createOne');
 const updateOne = require('./routes/updateOne');
 const deleteOne = require('./routes/deleteOne');
 
-
 router.get('/', getAll);
-router.get('/:id', getTable, getOne);
+router.get('/:id', getTicket, getOne);
 router.post('/', createOne);
-router.patch('/:id', getTable, updateOne);
-router.delete('/:id', getTable, deleteOne);
+router.patch('/:id', getTicket, updateOne);
+router.delete('/:id', getTicket, deleteOne);
 
 module.exports = router;

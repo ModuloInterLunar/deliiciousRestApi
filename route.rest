@@ -1,5 +1,5 @@
 GET http://localhost:8080/api/tables
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMCIsImlhdCI6MTY0MTgzNzM1OSwiZXhwIjoxNjQxODgwNTU5fQ.6XbxavCZ_-p9zjVGN6ezyP0888jK8F1L_lLssvgsvyU
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
 
 ###
 
@@ -45,12 +45,12 @@ GET http://localhost:8080/api/employees
 
 POST http://localhost:8080/api/employees
 Content-Type: application/json
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
 
 {
     "password": "asdaaaaaa",
     "username": "aasdfasasdf",
     "dni": "45454545D",
-    "name": "dd",
     "surname": "Nuevo",
     "isAdmin": true
 }
@@ -70,8 +70,8 @@ POST http://localhost:8080/login
 Content-Type: application/json
 
 {
-    "username": "djessy",
-    "password": "aaaaaa"
+    "username": "alvaro",
+    "password": "12345"
 }
 
 ###
@@ -99,4 +99,35 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:8080/api/ingredients/sal
+DELETE http://localhost:8080/api/ingredients/1
+
+###
+
+GET http://localhost:8080/api/tickets
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
+
+###
+
+POST http://localhost:8080/api/tickets
+Content-Type: application/json
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
+
+{
+    "total": 0.00,
+    "text": "TICKET",
+    "isPaid": false
+}
+
+###
+
+PATCH http://localhost:8080/api/tickets/1
+Content-Type: application/json
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
+
+{
+    "total": 3.00
+}
+
+###
+DELETE http://localhost:8080/api/tickets/1
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
