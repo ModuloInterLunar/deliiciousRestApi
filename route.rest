@@ -39,6 +39,7 @@ Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhd
 ###
 
 GET http://localhost:8080/api/employees
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzY2NjM0LCJleHAiOjE2NDI4MDk4MzR9.UIYXCVQcVf3RcZCeyRoNE1_xdE-7FJ5CaVnyK7Vy5EU
 ###
 
 POST http://localhost:8080/api/employees
@@ -69,7 +70,7 @@ POST http://localhost:8080/login
 Content-Type: application/json
 
 {
-    "username": "matalacabras",
+    "username": "alvaro",
     "password": "12345"
 }
 
@@ -103,13 +104,13 @@ DELETE http://localhost:8080/api/ingredients/1
 ###
 
 GET http://localhost:8080/api/tickets
-Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzY2NjM0LCJleHAiOjE2NDI4MDk4MzR9.UIYXCVQcVf3RcZCeyRoNE1_xdE-7FJ5CaVnyK7Vy5EU
 
 ###
 
 POST http://localhost:8080/api/tickets
 Content-Type: application/json
-Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzY2NjM0LCJleHAiOjE2NDI4MDk4MzR9.UIYXCVQcVf3RcZCeyRoNE1_xdE-7FJ5CaVnyK7Vy5EU
 
 {
     "total": 0.00,
@@ -127,25 +128,45 @@ Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhd
     "total": 3.00
 }
 
+
+
 ###
 DELETE http://localhost:8080/api/tickets/1
 Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
+###
 
+GET http://localhost:8080/api/orders
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzY2NjM0LCJleHAiOjE2NDI4MDk4MzR9.UIYXCVQcVf3RcZCeyRoNE1_xdE-7FJ5CaVnyK7Vy5EU
 
 ###
-PATCH http://localhost:8080/api/orders/2
+POST http://localhost:8080/api/orders
 Content-Type: application/json
-Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzAyNzYwLCJleHAiOjE2NDI3NDU5NjB9.Cn9QiXDxZCACmjCFBs-9_qKAYWbp5_T4YLIWnl21AIQ
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzY2NjM0LCJleHAiOjE2NDI4MDk4MzR9.UIYXCVQcVf3RcZCeyRoNE1_xdE-7FJ5CaVnyK7Vy5EU
 
 {
-    "ticket": "no",
+    "ticket": "1",
+    "dish": "Albondigas",
+    "hasBeenCoocked": false,
+    "hasBeenServed": false,
+    "isIncluded": false,
+    "description": "",
+    "employee": "1"
+}
+
+###
+PATCH http://localhost:8080/api/orders/1
+Content-Type: application/json
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzY2NjM0LCJleHAiOjE2NDI4MDk4MzR9.UIYXCVQcVf3RcZCeyRoNE1_xdE-7FJ5CaVnyK7Vy5EU
+
+{
+    "ticket": "1",
     "dish": "carne",
     "hasBeenServed": false,
-    "employee": "paco"
+    "employee": "2"
 }
 
 
 ###
-PATCH http://localhost:8080/api/orders/
-Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzAyNzYwLCJleHAiOjE2NDI3NDU5NjB9.Cn9QiXDxZCACmjCFBs-9_qKAYWbp5_T4YLIWnl21AIQ
+DELETE http://localhost:8080/api/orders/4
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzY2NjM0LCJleHAiOjE2NDI4MDk4MzR9.UIYXCVQcVf3RcZCeyRoNE1_xdE-7FJ5CaVnyK7Vy5EU
 
