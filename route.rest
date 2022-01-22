@@ -135,9 +135,8 @@ DELETE http://localhost:8080/api/tickets/1
 Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTY0MjY5MDU3NSwiZXhwIjoxNjQyNzMzNzc1fQ.ToYC-tosp_bfUQWtbaM4KlCi75ZudigbSbY1pI4kWrs
 ###
 
-GET http://localhost:8080/api/orders
-Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyNzY2NjM0LCJleHAiOjE2NDI4MDk4MzR9.UIYXCVQcVf3RcZCeyRoNE1_xdE-7FJ5CaVnyK7Vy5EU
-
+GET http://localhost:8080/api/orders/1
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODYzMjk3LCJleHAiOjE2NDI5MDY0OTd9.rlb2pnoGst0qvIOjmm11sHUuoITV4ZBLqA_Dvdc7gWg
 ###
 POST http://localhost:8080/api/orders
 Content-Type: application/json
