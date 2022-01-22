@@ -1,0 +1,30 @@
+
+GET http://localhost:8080/api/employees
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+###
+
+POST http://localhost:8080/api/employees
+Content-Type: application/json
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+
+{
+    "password": "12345",
+    "username": "matalacabras",
+    "name": "mataas",
+    "dni": "45454545D",
+    "surname": "Nuevo",
+    "isAdmin": true
+}
+###
+
+PATCH http://localhost:8080/api/employees/1
+Content-Type: application/json
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+
+{
+    "username": "alvaro"
+}
+###
+
+DELETE http://localhost:8080/api/employees/1
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
