@@ -1,10 +1,10 @@
 GET http://localhost:8080/api/ingredients
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}
 ###
 
 POST http://localhost:8080/api/ingredients
 Content-Type: application/json
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}
 
 {
     "name": "sal",
@@ -15,7 +15,7 @@ authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0I
 
 PATCH http://localhost:8080/api/ingredients/1
 Content-Type: application/json
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}
 
 {
     "name": "azucar"
@@ -23,4 +23,4 @@ authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0I
 ###
 
 DELETE http://localhost:8080/api/ingredients/1
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}

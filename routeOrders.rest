@@ -1,10 +1,10 @@
 GET http://localhost:8080/api/orders/1
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}
 ###
 
 POST http://localhost:8080/api/orders
 Content-Type: application/json
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}
 
 {
     "ticket": "1",
@@ -19,7 +19,7 @@ authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0I
 
 PATCH http://localhost:8080/api/orders/1
 Content-Type: application/json
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}
 
 {
     "ticket": "1",
@@ -30,4 +30,4 @@ authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0I
 ###
 
 DELETE http://localhost:8080/api/orders/4
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}

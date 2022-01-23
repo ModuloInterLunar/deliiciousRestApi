@@ -1,10 +1,10 @@
 GET http://localhost:8080/api/tables
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}
 ###
 
 POST http://localhost:8080/api/tables
 Content-Type: application/json
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}
 
 {
     "posX": 0.546,
@@ -14,14 +14,14 @@ authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0I
 }
 ###
 
-PATCH http://localhost:8080/api/tables/1
+PATCH http://localhost:8080/api/tables/5
 Content-Type: application/json
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}
 
 {
-    "actualTicket": "1"
+    "height": 45
 }
 ###
 
 DELETE http://localhost:8080/api/tables/1
-authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjQyODY0NjUzLCJleHAiOjE2NDI5MDc4NTN9.un-kZ3meXRgbXsgbcDwzMPjWoU11JV0Mz4Hsz508MX4
+authorization: bearer {{token}}
