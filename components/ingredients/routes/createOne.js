@@ -4,13 +4,11 @@ const services = require('../../../mongoose/services');
 const createOne = async (req, res) => {
     if (!req.body.id) req.body.id = await services.generateId(Ingredient);
 
-    console.log(req.body.price);
-
     const ingredient = new Ingredient({
         _id: req.body.id,
         name: req.body.name,
         price: req.body.price,
-        quantity: req.body.quantity 
+        quantity: req.body.quantity
     });
 
     try {

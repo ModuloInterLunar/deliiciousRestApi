@@ -3,7 +3,7 @@ const Ticket = require('../../../models/ticket');
 const getTicket = async (req, res, next) => {
     let ticket;
     try {
-        ticket = await Ticket.findById(req.params.id);
+        ticket = await Ticket.findById(req.params.id).populate('orders', '-order');
         if (!ticket) {
             return res.status(404).json({ message: 'Cannot find ticket'});
         }

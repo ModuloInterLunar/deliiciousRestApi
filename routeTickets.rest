@@ -9,7 +9,8 @@ authorization: bearer {{token}}
 {
     "total": 0.00,
     "text": "TICKET",
-    "isPaid": false
+    "isPaid": false,
+    "orders": ["1", "2"]
 }
 ###
 
@@ -22,5 +23,5 @@ authorization: bearer {{token}}
 }
 ###
 
-DELETE http://localhost:8080/api/tickets/1
+DELETE http://localhost:8080/api/tickets/6
 authorization: bearer {{token}}

@@ -7,7 +7,8 @@ const createOne = async (req, res) => {
         _id: req.body.id,
         total: req.body.total,
         text: req.body.text,
-        isPaid: req.body.isPaid
+        isPaid: req.body.isPaid,
+        orders: req.body.orders
     });
 
     try {
