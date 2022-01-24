@@ -15,4 +15,4 @@ const ticketSchema = new mongoose.Schema({
 
 ticketSchema.virtual('id').get(() => this._id);
 
-module.exports = mongoose.model('ticket', ticketSchema);
+module.exports = mongoose.model('Ticket', ticketSchema);
