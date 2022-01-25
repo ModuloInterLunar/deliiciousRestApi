@@ -7,11 +7,12 @@ const opts = {
 
 const ticketSchema = new mongoose.Schema({
     _id: { type: String, required: 'Id is required!' },
-    total: {type: Number, required: 'Total is required!'},
+    total: {type: Number, default: 0.0},
     text: {type: String, required: 'Text is required!'},
-    isPaid: {type: Boolean, required: 'IsPaid is required!'}
+    isPaid: {type: Boolean, required: 'IsPaid is required!'},
+    orders: [{type: String, ref: 'Order'}]
 }, opts);
 
 ticketSchema.virtual('id').get(() => this._id);
 
-module.exports = mongoose.model('ticket', ticketSchema);
+module.exports = mongoose.model('Ticket', ticketSchema);

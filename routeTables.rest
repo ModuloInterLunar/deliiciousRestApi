@@ -1,0 +1,27 @@
+GET http://localhost:8080/api/tables
+authorization: bearer {{token}}
+###
+
+POST http://localhost:8080/api/tables
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "posX": 0.546,
+    "posY": 0.4215,
+    "width": 30,
+    "height": 30
+}
+###
+
+PATCH http://localhost:8080/api/tables/5
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "height": 30
+}
+###
+
+DELETE http://localhost:8080/api/tables/1
+authorization: bearer {{token}}

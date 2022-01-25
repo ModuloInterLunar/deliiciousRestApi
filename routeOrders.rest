@@ -1,0 +1,33 @@
+GET http://localhost:8080/api/orders/1
+authorization: bearer {{token}}
+###
+
+POST http://localhost:8080/api/orders
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "ticket": "1",
+    "dish": "Albondigas",
+    "hasBeenCoocked": false,
+    "hasBeenServed": false,
+    "isIncluded": false,
+    "description": "",
+    "employee": "1"
+}
+###
+
+PATCH http://localhost:8080/api/orders/1
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "ticket": "1",
+    "dish": "carne",
+    "hasBeenServed": false,
+    "employee": "2"
+}
+###
+
+DELETE http://localhost:8080/api/orders/4
+authorization: bearer {{token}}

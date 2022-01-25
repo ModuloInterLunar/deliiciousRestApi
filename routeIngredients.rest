@@ -1,0 +1,26 @@
+GET http://localhost:8080/api/ingredients
+authorization: bearer {{token}}
+###
+
+POST http://localhost:8080/api/ingredients
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "name": "sal",
+    "price": 1.0,
+    "quantity": 3.0
+}
+###
+
+PATCH http://localhost:8080/api/ingredients/1
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "name": "azucar"
+}
+###
+
+DELETE http://localhost:8080/api/ingredients/1
+authorization: bearer {{token}}

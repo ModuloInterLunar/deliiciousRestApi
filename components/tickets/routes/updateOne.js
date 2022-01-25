@@ -2,6 +2,8 @@ const updateOne = async (req, res) => {
     if (req.body.total) res.ticket.total = req.body.total;
     if (req.body.text) res.ticket.text = req.body.text;
     if (req.body.isPaid) res.ticket.isPaid = req.body.isPaid;
+    if (req.body.orders) res.ticket.orders = req.body.orders;
+
     try {
         const updatedTicket = await res.ticket.save();
         res.json(updatedTicket);

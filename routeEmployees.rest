@@ -1,0 +1,30 @@
+
+GET http://localhost:8080/api/employees
+authorization: bearer {{token}}
+###
+
+POST http://localhost:8080/api/employees
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "password": "12345",
+    "username": "matalacabras",
+    "name": "mataas",
+    "dni": "45454545D",
+    "surname": "Nuevo",
+    "isAdmin": true
+}
+###
+
+PATCH http://localhost:8080/api/employees/1
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "username": "alvaro"
+}
+###
+
+DELETE http://localhost:8080/api/employees/1
+authorization: bearer {{token}}
