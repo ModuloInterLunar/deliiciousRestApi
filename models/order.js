@@ -13,7 +13,8 @@ const orderSchema = new mongoose.Schema({
     hasBeenServed: { type: Boolean, required: 'HasBeenServed is required!' },
     isIncluded: { type: Boolean, required: 'IsIncluded is required!' },
     description: { type: String },
-    employee: { type: String, ref: 'Employee', required: 'Employee is required!' } // id of an existing employee
+    employee: { type: String, ref: 'Employee', required: 'Employee is required!' }, // id of an existing employee
+    table: {type: String, required: 'Table id is required!'}
 }, opts);
 
 orderSchema.virtual('id').get(() => this._id);
