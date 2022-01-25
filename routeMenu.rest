@@ -1,0 +1,25 @@
+GET http://localhost:8080/api/menus
+authorization: bearer {{token}}
+###
+
+POST http://localhost:8080/api/menus
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "price": 15,
+    "dishes": ["1"]
+}
+###
+
+PATCH http://localhost:8080/api/menus/1
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "total": 3.00
+}
+###
+
+DELETE http://localhost:8080/api/menus/6
+authorization: bearer {{token}}

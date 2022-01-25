@@ -6,8 +6,8 @@ const opts = {
 
 const menuSchema = new mongoose.Schema({
     _id: { type: String, required: 'Id is required!' },
-    price: { type: Float, required: 'Price is required!' },
-    dishes: { type: String, required: 'Dishes is required!' },
+    price: { type: Number, required: 'Price is required!' },
+    dishes: [{ type: String, ref: 'Dish', required: 'Dishes is required!' }],
     
 }, opts);
 

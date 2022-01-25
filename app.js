@@ -16,6 +16,8 @@ app.use(logger('dev', {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const dishesRouter = require('./components/dishes');
+const menusRouter = require('./components/menus');
 const tablesRouter = require('./components/tables');
 const employeesRouter = require('./components/employees');
 const ticketsRouter = require('./components/tickets');
@@ -36,6 +38,8 @@ app.use('/login', login);
 
 app.use(auth);
 
+app.use('/api/dishes', dishesRouter);
+app.use('/api/menus', menusRouter);
 app.use('/api/employees', employeesRouter);
 app.use('/api/tables', tablesRouter);
 app.use('/api/tickets', ticketsRouter);
