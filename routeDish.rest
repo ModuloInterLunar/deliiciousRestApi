@@ -1,0 +1,29 @@
+GET http://localhost:8080/api/dishes
+authorization: bearer {{token}}
+###
+
+POST http://localhost:8080/api/dishes
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "name": "Fish",
+    "ingredients": "Fish and chips",
+    "quantity": 3,
+    "type": "food",
+    "price": 15,
+    "description": "lsdañjflñkñlasjkfd"
+}
+###
+
+PATCH http://localhost:8080/api/dishes/1
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "quantity": 5
+}
+###
+
+DELETE http://localhost:8080/api/dishes/1
+authorization: bearer {{token}}
