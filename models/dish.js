@@ -11,7 +11,8 @@ const dishSchema = new mongoose.Schema({
     quantity: { type: Number },
     type: { type: String, required: 'Type is required!' },
     price: { type: Number, required: 'Width is required!' },
-    description: { type: String }
+    description: { type: String },
+    image: { type: String }
 }, opts);
 
 dishSchema.virtual('id').get(() => this._id);

@@ -14,7 +14,8 @@ const createOne = async (req, res) => {
         hasBeenCoocked: req.body.hasBeenCoocked,
         hasBeenServed: req.body.hasBeenServed,
         isIncluded: req.body.isIncluded,
-        description: req.body.description
+        description: req.body.description,
+        image: req.body.image
     });
 
     try {

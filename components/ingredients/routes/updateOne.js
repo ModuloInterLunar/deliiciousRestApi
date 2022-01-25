@@ -3,6 +3,7 @@ const updateOne = async (req, res) => {
     if (req.body.name) res.ingredient.name = req.body.name;
     if (req.body.price) res.ingredient.price = req.body.price;
     if (req.body.quantity) res.ingredient.quantity = req.body.quantity;
+    if (req.body.image) res.ingredient.image = req.body.image;
 
     console.log(req.ingredient);
 

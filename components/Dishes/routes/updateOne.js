@@ -6,6 +6,7 @@ const updateOne = async (req, res) => {
     if (req.body.type) res.dish.type = req.body.type;
     if (req.body.price) res.dish.price = req.body.price;
     if (req.body.description) res.dish.description = req.body.description;
+    if (req.body.image) res.dish.image = req.body.image;
     try {
         const updatedDish = await res.dish.save();
         res.json(updatedDish);
