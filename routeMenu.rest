@@ -17,9 +17,9 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "total": 3.00
+    "price": 10
 }
 ###
 
-DELETE http://localhost:8080/api/menus/6
+DELETE http://localhost:8080/api/menus/1
 authorization: bearer {{token}}
