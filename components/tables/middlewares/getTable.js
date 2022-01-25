@@ -3,7 +3,7 @@ const Table = require('../../../models/table');
 const getTable = async (req, res, next) => {
     let table;
     try {
-        table = await Table.findById(req.params.id);
+        table = await Table.findById(req.params.id).populate('actualTicket');
         if (!table) {
             return res.status(404).json({ message: 'Cannot find table'});
         }

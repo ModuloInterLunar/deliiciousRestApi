@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const getTable = require('./middlewares/getTable');
+const checkRelations = require('./middlewares/checkRelations');
 
 const getAll = require('./routes/getAll');
 const getOne = require('./routes/getOne');
@@ -12,8 +13,8 @@ const deleteOne = require('./routes/deleteOne');
 
 router.get('/', getAll);
 router.get('/:id', getTable, getOne);
-router.post('/', createOne);
-router.patch('/:id', getTable, updateOne);
+router.post('/', checkRelations, createOne);
+router.patch('/:id', getTable, checkRelations, updateOne);
 router.delete('/:id', getTable, deleteOne);
 
 module.exports = router;
