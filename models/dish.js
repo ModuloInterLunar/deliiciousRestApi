@@ -7,7 +7,6 @@ const opts = {
 const dishSchema = new mongoose.Schema({
     _id: { type: String, required: 'Id is required!' },
     name: { type: String, trim: true, required: 'Name is required!' },
-    ingredients: { type: String, trim: true },
     quantity: { type: Number },
     type: { type: String, enum: { values: ['Food', 'Drink'], message: '{VALUE} is not supported' }, required: 'Type is required!' },
     quantity: { type: Number },

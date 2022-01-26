@@ -7,10 +7,13 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "name": "Fish",
-    "ingredients": "Fish and chips",
+    "name": "Hamburguer",
+    "ingredients": {
+        "pan_hamburguesa": 1,
+        "carne_vacuno": 500
+    },
     "quantity": 3,
-    "type": "food",
+    "type": "Food",
     "price": 15,
     "description": "lsdañjflñkñlasjkfd"
 }
