@@ -7,8 +7,8 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "name": "sal",
-    "price": 1.0,
+    "id": 3,
+    "name": "salsa",
     "quantity": 3.0
 }
 ###

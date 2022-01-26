@@ -10,7 +10,8 @@ const getAll = async (req, res) => {
                 model: "Order",
                 populate: {
                     path: "employee",
-                    mode: "Employee"
+                    model: "Employee",
+                    select: "-password -username"
                 }
             }
         });

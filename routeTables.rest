@@ -2,6 +2,10 @@ GET http://localhost:8080/api/tables
 authorization: bearer {{token}}
 ###
 
+GET http://localhost:8080/api/tables/6
+authorization: bearer {{token}}
+###
+
 POST http://localhost:8080/api/tables
 Content-Type: application/json
 authorization: bearer {{token}}
@@ -11,7 +15,7 @@ authorization: bearer {{token}}
     "posY": 0.4215,
     "width": 30,
     "height": 30,
-    "actualTicket": ""
+    "actualTicket": "2"
 }
 ###
 

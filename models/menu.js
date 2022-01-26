@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const opts = { 
+const opts = {
     toJSON: { virtuals: true }
 };
 

@@ -8,13 +8,30 @@ authorization: bearer {{token}}
 
 {
     "name": "Hamburguer",
-    "ingredients": {
-        "pan_hamburguesa": 1,
-        "carne_vacuno": 500
-    },
-    "quantity": 3,
+    "ingredients": [
+        {
+            "ingredient": "1",
+            "quantity": 200
+        },
+        {
+            "ingredient": "2",
+            "quantity": 30
+        }
+    ],
     "type": "Food",
     "price": 15,
+    "description": "lsdañjflñkñlasjkfd"
+}
+###
+POST http://localhost:8080/api/dishes
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "name": "Fanta",
+    "quantity": 200,
+    "type": "Drink",
+    "price": 2.5,
     "description": "lsdañjflñkñlasjkfd"
 }
 ###
@@ -24,9 +41,26 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "quantity": 5
+    "name": "Hamburguer",
+    "ingredients": [
+        {
+            "ingredient": "1",
+            "quantity": 200
+        },
+        {
+            "ingredient": "2",
+            "quantity": 30
+        },
+        {
+            "ingredient": "3",
+            "quantity": 20
+        }
+    ],
+    "type": "Food",
+    "price": 15,
+    "description": "lsdañjflñkñlasjkfd"
 }
 ###
 
-DELETE http://localhost:8080/api/dishes/1
+DELETE http://localhost:8080/api/dishes/3
 authorization: bearer {{token}}
