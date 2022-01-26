@@ -6,7 +6,8 @@ const createOne = async (req, res) => {
     const menu = new Menu({
         _id: req.body.id,
         price: req.body.price,
-        dishes: req.body.dishes
+        dishes: req.body.dishes,
+        image: req.body.image
     });
 
     try {

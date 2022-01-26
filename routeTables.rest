@@ -10,7 +10,8 @@ authorization: bearer {{token}}
     "posX": 0.546,
     "posY": 0.4215,
     "width": 30,
-    "height": 30
+    "height": 30,
+    "actualTicket": ""
 }
 ###
 
@@ -23,5 +24,5 @@ authorization: bearer {{token}}
 }
 ###
 
-DELETE http://localhost:8080/api/tables/1
+DELETE http://localhost:8080/api/tables/4
 authorization: bearer {{token}}

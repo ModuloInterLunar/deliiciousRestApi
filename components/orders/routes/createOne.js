@@ -11,10 +11,12 @@ const createOne = async (req, res) => {
         ticket: req.body.ticket,
         dish: req.body.dish,
         employee: req.body.employee,
+        table: req.body.table,
         hasBeenCoocked: req.body.hasBeenCoocked,
         hasBeenServed: req.body.hasBeenServed,
         isIncluded: req.body.isIncluded,
-        description: req.body.description
+        description: req.body.description,
+        image: req.body.image
     });
 
     try {

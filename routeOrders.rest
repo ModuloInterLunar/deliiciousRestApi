@@ -13,7 +13,8 @@ authorization: bearer {{token}}
     "hasBeenServed": false,
     "isIncluded": false,
     "description": "",
-    "employee": "1"
+    "employee": "1",
+    "table": "10"
 }
 ###
 

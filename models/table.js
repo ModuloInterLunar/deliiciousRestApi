@@ -10,7 +10,7 @@ const tableSchema = new mongoose.Schema({
     posY: { type: Number, required: 'PosY is required!' },
     width: { type: Number, required: 'Width is required!' },
     height: { type: Number, required: 'Height is required!' },
-    actualTicket: { type: String, unique: true, sparse: true }
+    actualTicket: { type: String, ref: 'Ticket', unique: true, sparse: true }
 }, opts);
 
 tableSchema.virtual('id').get(() => this._id);

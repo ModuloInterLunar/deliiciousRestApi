@@ -13,7 +13,8 @@ const dishSchema = new mongoose.Schema({
     quantity: { type: Number },
     ingredients: { type: Map, of: Number },
     price: { type: Number, required: 'Width is required!' },
-    description: { type: String, trim: true }
+    description: { type: String, trim: true },
+    image: { type: String }
 }, opts);
 
 dishSchema.virtual('id').get(() => this._id);

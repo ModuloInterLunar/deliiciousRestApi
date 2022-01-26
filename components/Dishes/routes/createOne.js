@@ -10,7 +10,8 @@ const createOne = async (req, res) => {
         quantity: req.body.quantity,
         type: req.body.type,
         price: req.body.price,
-        description: req.body.description
+        description: req.body.description,
+        image: req.body.image
     });
 
     try {
