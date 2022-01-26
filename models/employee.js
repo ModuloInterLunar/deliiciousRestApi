@@ -7,7 +7,7 @@ const opts = {
 
 const employeeSchema = new mongoose.Schema({
     _id: { type: String, required: true },
-    username: { type: String, required: 'Username is required!', unique: "Username already in use" },
+    username: { type: String, trim: true, required: 'Username is required!', unique: "Username already in use" },
     dni: {
         type: String,
         required: 'DNI is required!',
@@ -16,8 +16,8 @@ const employeeSchema = new mongoose.Schema({
             return /(\d{8}[A-Z])|([XYZ]\d{7}[A-Z])/.test(v);
         }
     },
-    name: { type: String, required: 'Name is required!' },
-    surname: { type: String, required: 'Surname is required!' },
+    name: { type: String, trim: true, required: 'Name is required!' },
+    surname: { type: String, trim: true, required: 'Surname is required!' },
     password: { type: String, required: 'Password is required!' },
     isAdmin: { type: Boolean, required: 'IsAdmin is required!' }
 }, opts);

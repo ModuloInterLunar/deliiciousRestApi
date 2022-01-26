@@ -12,7 +12,7 @@ const orderSchema = new mongoose.Schema({
     hasBeenCoocked: { type: Boolean, required: 'HasBeenCoocked is required!' },
     hasBeenServed: { type: Boolean, required: 'HasBeenServed is required!' },
     isIncluded: { type: Boolean, required: 'IsIncluded is required!' },
-    description: { type: String },
+    description: { type: String, trim: true },
     employee: { type: String, ref: 'Employee', required: 'Employee is required!' } // id of an existing employee
 }, opts);
 
