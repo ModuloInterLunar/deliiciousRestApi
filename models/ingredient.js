@@ -7,7 +7,6 @@ const opts = {
 const ingredientSchema = new mongoose.Schema({
     _id: { type: String, required: 'Id is required!' },
     name: { type: String, trim: true, required: 'Name is required!', unique: 'Name already in use!'},
-    price: { type: Number, required: 'Price is required!' },
     quantity: { type: Number, required: 'Quantity is required!' },
     image: { type: String }
 }, opts);

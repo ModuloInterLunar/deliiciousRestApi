@@ -7,7 +7,6 @@ const createOne = async (req, res) => {
     const ingredient = new Ingredient({
         _id: req.body.id,
         name: req.body.name,
-        price: req.body.price,
         quantity: req.body.quantity,
         image: req.body.image
     });
