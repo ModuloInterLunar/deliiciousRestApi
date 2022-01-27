@@ -10,7 +10,7 @@ authorization: bearer {{token}}
     "total": 0.00,
     "text": "TICKET",
     "isPaid": false,
-    "orders": ["1", "2"]
+    "orders": ["1"]
 }
 ###
 

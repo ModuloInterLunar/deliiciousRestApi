@@ -12,10 +12,6 @@ authorization: bearer {{token}}
         {
             "ingredient": "1",
             "quantity": 200
-        },
-        {
-            "ingredient": "2",
-            "quantity": 30
         }
     ],
     "type": "Food",

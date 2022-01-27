@@ -19,12 +19,12 @@ authorization: bearer {{token}}
 }
 ###
 
-PATCH http://localhost:8080/api/tables/5
+PATCH http://localhost:8080/api/tables/1
 Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "height": 30
+    "actualTicket": "1"
 }
 ###
 
