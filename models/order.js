@@ -8,7 +8,7 @@ const opts = {
 const orderSchema = new mongoose.Schema({
     _id: { type: String, required: 'Id is required!' },
     ticket: { type: String, ref: 'Ticket', required: 'Ticket is required!' }, // id of an existing and active ticket
-    dish: { type: String, required: 'Dish is required!' }, // id of an existing dish
+    dish: { type: String, ref: 'Dish', required: 'Dish is required!' }, // id of an existing dish
     hasBeenCoocked: { type: Boolean, required: 'HasBeenCoocked is required!' },
     hasBeenServed: { type: Boolean, required: 'HasBeenServed is required!' },
     isIncluded: { type: Boolean, required: 'IsIncluded is required!' },
