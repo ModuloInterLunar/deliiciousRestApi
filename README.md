@@ -13,6 +13,8 @@ Y añadir un archivo `.env`, que contendrá lo siguiente (que podéis modificar 
 
 Después, solo tenéis que usar `npm start` para iniciarlo.
 
+También hay que crear un archivo logs/access.log
+
 <br/>
 
 Para probar la conexión, se puede usar la extensión Rest Client -> 'humao.rest-client'

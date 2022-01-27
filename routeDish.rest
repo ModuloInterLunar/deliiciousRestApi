@@ -8,13 +8,13 @@ authorization: bearer {{token}}
 
 {
     "name": "Hamburguer",
-    "ingredients": [
+    "ingredientQties": [
         {
             "ingredient": "1",
             "quantity": 200
         },
         {
-            "ingredient": "2",
+            "ingredient": "3",
             "quantity": 30
         }
     ],
@@ -42,7 +42,7 @@ authorization: bearer {{token}}
 
 {
     "name": "Hamburguer",
-    "ingredients": [
+    "ingredientQties": [
         {
             "ingredient": "1",
             "quantity": 200
@@ -62,5 +62,5 @@ authorization: bearer {{token}}
 }
 ###
 
-DELETE http://localhost:8080/api/dishes/3
+DELETE http://localhost:8080/api/dishes/2
 authorization: bearer {{token}}

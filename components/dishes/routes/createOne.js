@@ -7,7 +7,7 @@ const createOne = async (req, res) => {
     const dish = await new Dish({
         _id: req.body.id,
         name: req.body.name,
-        ingredients: req.body.ingredients,
+        ingredientQties: req.body.ingredientQties,
         type: req.body.type,
         price: req.body.price,
         description: req.body.description,

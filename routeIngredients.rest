@@ -24,3 +24,15 @@ authorization: bearer {{token}}
 
 DELETE http://localhost:8080/api/ingredients/1
 authorization: bearer {{token}}
+
+###
+POST http://localhost:8080/api/ingredients
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "id": 1,
+    "name": "pan",
+    "quantity": 3.0
+}
+###
