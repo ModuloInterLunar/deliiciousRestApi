@@ -9,6 +9,7 @@ const updateOne = async (req, res) => {
     if (req.body.isIncluded) res.order.isIncluded = req.body.isIncluded;
     if (req.body.description) res.order.description = req.body.description;
     if (req.body.image) res.order.image = req.body.image;
+    
     try {
         const updatedOrder = await res.order.save();
         res.json(updatedOrder);

@@ -21,7 +21,17 @@ const createOne = async (req, res) => {
 
     try {
         const newOrder = await order.save();
-        res.status(201).json(newOrder);
+        const newOrderPopulated = await Order.findById(newOrder.id).
+            populate('employee', '-password').
+            populate({
+                path: 'dish',
+                model: 'Dish',
+                populate: {
+                    path: 'ingredientQties.ingredient',
+                    model: 'Ingredient'
+                }
+            });
+        res.status(201).json(newOrderPopulated);
     } catch (err) {
         console.log(err.message);
         res.status(400).json({ message: err.message});

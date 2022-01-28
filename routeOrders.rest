@@ -23,10 +23,8 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "ticket": "1",
-    "dish": "carne",
-    "hasBeenServed": false,
-    "employee": "2"
+    "dish": "1",
+    "table": "1"
 }
 ###
 

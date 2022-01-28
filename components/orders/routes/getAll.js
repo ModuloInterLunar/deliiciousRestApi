@@ -3,7 +3,6 @@ const Order = require('../../../models/order');
 const getAll = async (req, res) => {
     try {
         const orders = await Order.find().populate('employee', "-password").
-            populate('ticket').
             populate('dish');
         res.json(orders);
     } catch (err) {

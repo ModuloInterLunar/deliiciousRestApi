@@ -19,7 +19,7 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "orders": ["3", "4"]
+    
 }
 ###
 

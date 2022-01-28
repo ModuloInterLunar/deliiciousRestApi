@@ -7,13 +7,12 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "id": 4,
-    "name": "fanta",
+    "name": "carne",
     "quantity": 5000
 }
 ###
 
-PATCH http://localhost:8080/api/ingredients/1
+PATCH http://localhost:8080/api/ingredients/2
 Content-Type: application/json
 authorization: bearer {{token}}
 

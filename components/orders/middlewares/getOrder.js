@@ -5,7 +5,6 @@ const getOrder = async (req, res, next) => {
     try {
         order = await Order.findById(req.params.id).
             populate('employee', '-password').
-            populate('ticket').
             populate('dish');
         if (!order) {
             return res.status(404).json({ message: 'Cannot find order'});
