@@ -20,7 +20,7 @@ authorization: bearer {{token}}
     ],
     "type": "Food",
     "price": 15,
-    "description": "lsdañjflñkñlasjkfd"
+    "description": "Hamburguesa de carne con salsa"
 }
 ###
 POST http://localhost:8080/api/dishes
@@ -29,10 +29,15 @@ authorization: bearer {{token}}
 
 {
     "name": "Fanta",
-    "quantity": 200,
+    "ingredientQties": [
+        {
+            "ingredient": "4",
+            "quantity": 200
+        }
+    ],
     "type": "Drink",
     "price": 2.5,
-    "description": "lsdañjflñkñlasjkfd"
+    "description": "Vaso de Fanta Naranja"
 }
 ###
 
