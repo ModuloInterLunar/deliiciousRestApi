@@ -9,7 +9,7 @@ const updateOne = async (req, res) => {
     
     try {
         const updatedTable = await res.table.save();
-        const table = await Table.findById(updatedTable.id).populate({
+        const updatedTablePopulated = await Table.findById(updatedTable.id).populate({
             path: "actualTicket",
             model: "Ticket",
             populate: {
@@ -22,7 +22,7 @@ const updateOne = async (req, res) => {
                 }
             }
         });
-        res.json(table);
+        res.json(updatedTablePopulated);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }

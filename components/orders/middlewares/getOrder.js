@@ -3,9 +3,16 @@ const Order = require('../../../models/order');
 const getOrder = async (req, res, next) => {
     let order;
     try {
-        order = await Order.findById(req.params.id).
-            populate('employee', '-password').
-            populate('dish');
+        order = await Order.findById(req.params.id)
+            .populate('employee', '-password')
+            .populate({
+                path: 'dish',
+                model: 'Dish',
+                populate: {
+                    path: 'ingredientQties.ingredient',
+                    model: 'Ingredient'
+                }
+            });
         if (!order) {
             return res.status(404).json({ message: 'Cannot find order'});
         }
