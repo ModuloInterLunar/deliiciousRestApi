@@ -9,12 +9,21 @@ const getTable = async (req, res, next) => {
             populate: {
                 path: "orders",
                 model: "Order",
-                populate: {
+                populate: [{
+                    path: 'dish',
+                    model: 'Dish',  
+                    populate: {
+                        path: 'ingredientQties.ingredient',
+                        model: 'Ingredient'
+                    }
+                },
+                {
                     path: "employee",
                     model: "Employee",
-                    select: "-password -username"
-                }
+                    select: "-password -username",
+                }]
             }
+            
         });
         if (!table) {
             return res.status(404).json({ message: 'Cannot find table'});

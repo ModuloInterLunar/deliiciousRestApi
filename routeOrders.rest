@@ -1,4 +1,4 @@
-GET http://localhost:8080/api/orders/1
+GET http://localhost:8080/api/orders
 authorization: bearer {{token}}
 ###
 
@@ -8,13 +8,13 @@ authorization: bearer {{token}}
 
 {
     "ticket": "1",
-    "dish": "Albondigas",
+    "dish": "1",
     "hasBeenCoocked": false,
     "hasBeenServed": false,
     "isIncluded": false,
     "description": "",
     "employee": "1",
-    "table": "10"
+    "table": "1"
 }
 ###
 
@@ -30,5 +30,5 @@ authorization: bearer {{token}}
 }
 ###
 
-DELETE http://localhost:8080/api/orders/4
+DELETE http://localhost:8080/api/orders/1
 authorization: bearer {{token}}
