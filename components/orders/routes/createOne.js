@@ -1,7 +1,6 @@
 const Order = require('../../../models/order');
-const Ticket = require('../../../models/ticket');
-const Employee = require('../../../models/employee');
 const services = require('../../../mongoose/services');
+const populater = require('../settings/populater');
 
 const createOne = async (req, res) => {
     if (!req.body.id) req.body.id = await services.generateId(Order);
@@ -21,16 +20,7 @@ const createOne = async (req, res) => {
 
     try {
         const newOrder = await order.save();
-        const newOrderPopulated = await Order.findById(newOrder.id).
-            populate('employee', '-password').
-            populate({
-                path: 'dish',
-                model: 'Dish',
-                populate: {
-                    path: 'ingredientQties.ingredient',
-                    model: 'Ingredient'
-                }
-            });
+        const newOrderPopulated = await Order.findById(newOrder.id).populate(populater);
         res.status(201).json(newOrderPopulated);
     } catch (err) {
         console.log(err.message);

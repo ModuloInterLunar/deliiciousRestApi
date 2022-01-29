@@ -1,4 +1,5 @@
 const Table = require('../../../models/table');
+const populater = require('../settings/populater');
 
 const updateOne = async (req, res) => {
     if (req.body.posX) res.table.posX = req.body.posX;
@@ -9,27 +10,7 @@ const updateOne = async (req, res) => {
     
     try {
         const updatedTable = await res.table.save();
-        const updatedTablePopulated = await Table.findById(updatedTable.id).populate({
-            path: "actualTicket",
-            model: "Ticket",
-            populate: {
-                path: "orders",
-                model: "Order",
-                populate: [{
-                    path: 'dish',
-                    model: 'Dish',  
-                    populate: {
-                        path: 'ingredientQties.ingredient',
-                        model: 'Ingredient'
-                    }
-                },
-                {
-                    path: "employee",
-                    model: "Employee",
-                    select: "-password -username",
-                }]
-            }
-        });
+        const updatedTablePopulated = await Table.findById(updatedTable.id).populate(populater);
         res.json(updatedTablePopulated);
     } catch (err) {
         res.status(400).json({ message: err.message });

@@ -7,6 +7,7 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
+    "id": 1,
     "name": "Hamburguer",
     "ingredientQties": [
         {
@@ -37,35 +38,19 @@ authorization: bearer {{token}}
     ],
     "type": "Drink",
     "price": 2.5,
-    "description": "Vaso de Fanta Naranja"
+    "description": "Vaso de Fanta Naranja",
+    "image": "https://supercostablanca.es/7430-thickbox_default/fanta-naranja-33cl.jpg"
 }
 ###
 
-PATCH http://localhost:8080/api/dishes/1
+PATCH http://localhost:8080/api/dishes/3
 Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "name": "Hamburguer",
-    "ingredientQties": [
-        {
-            "ingredient": "1",
-            "quantity": 200
-        },
-        {
-            "ingredient": "2",
-            "quantity": 30
-        },
-        {
-            "ingredient": "3",
-            "quantity": 20
-        }
-    ],
-    "type": "Food",
-    "price": 15,
-    "description": "lsdañjflñkñlasjkfd"
+    "image": "https://supercostablanca.es/7430-thickbox_default/fanta-naranja-33cl.jpg"
 }
 ###
 
-DELETE http://localhost:8080/api/dishes/2
+DELETE http://localhost:8080/api/dishes/1
 authorization: bearer {{token}}

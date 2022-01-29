@@ -1,9 +1,10 @@
 const Ticket = require('../../../models/ticket');
+const populater = require('../settings/populater');
 
 const getTicket = async (req, res, next) => {
     let ticket;
     try {
-        ticket = await Ticket.findById(req.params.id);
+        ticket = await Ticket.findById(req.params.id).populate(populater);
         if (!ticket) {
             return res.status(404).json({ message: 'Cannot find ticket'});
         }

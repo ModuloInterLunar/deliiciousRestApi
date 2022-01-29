@@ -1,3 +1,6 @@
+const Order = require('../../../models/order');
+const populater = require('../settings/populater');
+
 const updateOne = async (req, res) => {
     
     if (req.body.ticket) res.order.ticket = req.body.ticket;
@@ -12,7 +15,8 @@ const updateOne = async (req, res) => {
     
     try {
         const updatedOrder = await res.order.save();
-        res.json(updatedOrder);
+        const updatedOrderPopulated = await Order.findById(updatedOrder.id).populate(populater);
+        res.json(updatedOrderPopulated);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }

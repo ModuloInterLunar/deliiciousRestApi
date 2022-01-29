@@ -8,7 +8,7 @@ authorization: bearer {{token}}
 
 {
     "price": 15,
-    "dishes": ["1"]
+    "dishes": ["1", "2"]
 }
 ###
 

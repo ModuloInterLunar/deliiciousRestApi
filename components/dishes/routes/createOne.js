@@ -1,6 +1,6 @@
 const Dish = require('../../../models/dish');
 const services = require('../../../mongoose/services');
-var mongoose = require('mongoose');
+const populater = require('../settings/populater');
 
 const createOne = async (req, res) => {
     if (!req.body.id) req.body.id = await services.generateId(Dish);
@@ -16,7 +16,8 @@ const createOne = async (req, res) => {
 
     try {
         const newDish = await dish.save();
-        res.status(201).json(newDish);
+        const newDishPopulated = await Dish.findById(newDish.id).populate(populater);
+        res.status(201).json(newDishPopulated);
     } catch (err) {
         console.log(err.message);
         res.status(400).json({ message: err.message });

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const getDish = require('./middlewares/getDish');
+const getDishPopulated = require('./middlewares/getDishPopulated');
 
 const getAll = require('./routes/getAll');
 const getOne = require('./routes/getOne');
@@ -11,7 +12,7 @@ const deleteOne = require('./routes/deleteOne');
 
 
 router.get('/', getAll);
-router.get('/:id', getDish, getOne);
+router.get('/:id', getDishPopulated, getOne);
 router.post('/', createOne);
 router.patch('/:id', getDish, updateOne);
 router.delete('/:id', getDish, deleteOne);

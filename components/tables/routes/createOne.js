@@ -1,5 +1,6 @@
 const Table = require('../../../models/table');
 const services = require('../../../mongoose/services');
+const populater = require('../settings/populater');
 
 const createOne = async (req, res) => {
     if (!req.body.id) req.body.id = await services.generateId(Table);
@@ -14,7 +15,8 @@ const createOne = async (req, res) => {
 
     try {
         const newTable = await table.save();
-        res.status(201).json(newTable);
+        const newTablePopulated = await Table.findById(newTable.id).populate(populater);
+        res.status(201).json(newTablePopulated);
     } catch (err) {
         console.log(err.message);
         res.status(400).json({ message: err.message});

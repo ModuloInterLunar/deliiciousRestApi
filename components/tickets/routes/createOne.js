@@ -1,5 +1,6 @@
 const Ticket = require('../../../models/ticket');
 const services = require('../../../mongoose/services');
+const populater = require('../settings/populater');
 
 const createOne = async (req, res) => {
     if (!req.body.id) req.body.id = await services.generateId(Ticket);
@@ -13,7 +14,8 @@ const createOne = async (req, res) => {
 
     try {
         const newTicket = await ticket.save();
-        res.status(201).json(newTicket);
+        const newTicketPopulated = await ticket.findById(newTicket.id).populate(populater);
+        res.status(201).json(newTicketPopulated);
     } catch (err) {
         console.log(err.message);
         res.status(400).json({ message: err.message});

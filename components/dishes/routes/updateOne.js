@@ -1,3 +1,5 @@
+const Dish = require('../../../models/dish');
+const populater = require('../settings/populater');
 
 const updateOne = async (req, res) => {
     if (req.body.name) res.dish.name = req.body.name;
@@ -8,7 +10,8 @@ const updateOne = async (req, res) => {
     if (req.body.image) res.dish.image = req.body.image;
     try {
         const updatedDish = await res.dish.save();
-        res.json(updatedDish);
+        const updatedDishPopulated = await Dish.findById(updatedDish.id).populate(populater);
+        res.json(updatedDishPopulated);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }

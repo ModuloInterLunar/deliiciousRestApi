@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const getTable = require('./middlewares/getTable');
+const getTablePopulated = require('./middlewares/getTablePopulated');
 const checkRelations = require('./middlewares/checkRelations');
 
 const getAll = require('./routes/getAll');
@@ -12,7 +13,7 @@ const deleteOne = require('./routes/deleteOne');
 
 
 router.get('/', getAll);
-router.get('/:id', getTable, getOne);
+router.get('/:id', getTablePopulated, getOne);
 router.post('/', checkRelations, createOne);
 router.patch('/:id', getTable, checkRelations, updateOne);
 router.delete('/:id', getTable, deleteOne);

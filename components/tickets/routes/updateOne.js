@@ -1,4 +1,5 @@
 const Ticket = require('../../../models/ticket');
+const populater = require('../settings/populater');
 
 const updateOne = async (req, res) => {
     if (req.body.total) res.ticket.total = req.body.total;
@@ -8,25 +9,7 @@ const updateOne = async (req, res) => {
 
     try {
         const updatedTicket = await res.ticket.save();
-        const updatedTicketPopulated = await Ticket.findById(updatedTicket.id).populate({
-            path: 'orders',
-            model: 'Order',
-            populate: [
-                {
-                    path: 'dish',
-                    model: 'Dish',
-                    populate: 
-                    {
-                        path: 'ingredientQties.ingredient',
-                        model: 'Ingredient'
-                    }
-                },
-                {
-                    path: 'employee',
-                    model: 'Employee'
-                }
-            ]
-        });
+        const updatedTicketPopulated = await Ticket.findById(updatedTicket.id).populate(populater);
         res.json(updatedTicketPopulated);
     } catch (err) {
         res.status(400).json({ message: err.message });

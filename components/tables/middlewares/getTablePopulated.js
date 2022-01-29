@@ -1,9 +1,10 @@
 const Table = require('../../../models/table');
+const populater = require('../settings/populater');
 
 const getTable = async (req, res, next) => {
     let table;
     try {
-        table = await Table.findById(req.params.id);
+        table = await Table.findById(req.params.id).populate(populater);
         if (!table) {
             return res.status(404).json({ message: 'Cannot find table'});
         }
