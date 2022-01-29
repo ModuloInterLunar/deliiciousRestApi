@@ -14,7 +14,7 @@ const createOne = async (req, res) => {
 
     try {
         const newTicket = await ticket.save();
-        const newTicketPopulated = await ticket.findById(newTicket.id).populate(populater);
+        const newTicketPopulated = await Ticket.findById(newTicket.id).populate(populater);
         res.status(201).json(newTicketPopulated);
     } catch (err) {
         console.log(err.message);

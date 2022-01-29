@@ -7,8 +7,7 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "id": 1,
-    "name": "Hamburguer",
+    "name": "Hamburguer de Carne de Vacuno GV",
     "ingredientQties": [
         {
             "ingredient": "1",
@@ -17,6 +16,10 @@ authorization: bearer {{token}}
         {
             "ingredient": "2",
             "quantity": 30
+        },
+        {
+            "ingredient": "3",
+            "quantity": 2
         }
     ],
     "type": "Food",

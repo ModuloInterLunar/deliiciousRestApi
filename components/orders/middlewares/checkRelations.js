@@ -1,6 +1,6 @@
 const Ticket = require('../../../models/ticket');
 const Employee = require('../../../models/employee');
-const Table = require('../../../models/ticket');
+const Table = require('../../../models/table');
 const Dish = require('../../../models/dish');
 
 const checkRelations = async (req, res, next) => {
