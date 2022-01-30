@@ -46,12 +46,13 @@ authorization: bearer {{token}}
 }
 ###
 
-PATCH http://localhost:8080/api/dishes/3
+PATCH http://localhost:8080/api/dishes/7
 Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "image": "https://supercostablanca.es/7430-thickbox_default/fanta-naranja-33cl.jpg"
+    "name": "Hamburguesa de Pollo",
+    "description": "Hamburguesa de Pollo con salsa"
 }
 ###
 

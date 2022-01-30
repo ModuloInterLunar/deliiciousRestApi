@@ -7,12 +7,12 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "name": "carne",
-    "quantity": 5000
+    "name": "pollo",
+    "quantity": 8000
 }
 ###
 
-PATCH http://localhost:8080/api/ingredients/2
+PATCH http://localhost:8080/api/ingredients/7
 Content-Type: application/json
 authorization: bearer {{token}}
 
