@@ -7,7 +7,7 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "name": "Hamburguer de Carne de Vacuno GV",
+    "name": "Hamburguer de Carne",
     "ingredientQties": [
         {
             "ingredient": "1",
@@ -51,8 +51,7 @@ Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "name": "Hamburguesa de Pollo",
-    "description": "Hamburguesa de Pollo con salsa"
+    "image": "https://www.comedera.com/wp-content/uploads/2020/04/sandwich-434658_1280-500x375.jpg"
 }
 ###
 
