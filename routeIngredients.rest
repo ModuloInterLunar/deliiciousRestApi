@@ -13,12 +13,12 @@ authorization: bearer {{token}}
 }
 ###
 
-PATCH http://localhost:8080/api/ingredients/7
+PATCH http://localhost:8080/api/ingredients/1
 Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "name": "azucar"
+    "quantity": 500
 }
 ###
 
@@ -36,3 +36,11 @@ authorization: bearer {{token}}
     "quantity": 3.0
 }
 ###
+
+PATCH http://localhost:8080/api/ingredients/reduce/1
+Content-Type: application/json
+authorization: bearer {{token}}
+
+{
+    "quantity": 5
+}

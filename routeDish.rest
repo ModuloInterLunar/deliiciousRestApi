@@ -55,5 +55,5 @@ authorization: bearer {{token}}
 }
 ###
 
-DELETE http://localhost:8080/api/dishes/1
+DELETE http://localhost:8080/api/dishes/10
 authorization: bearer {{token}}
