@@ -8,8 +8,7 @@ const createOne = async (req, res) => {
         _id: req.body.id,
         name: req.body.name,
         quantity: req.body.quantity,
-        measure: req.body.measure,
-        image: req.body.image
+        measure: req.body.measure
     });
 
     try {
