@@ -6,6 +6,7 @@ const opts = {
 
 const menuSchema = new mongoose.Schema({
     _id: { type: String, required: 'Id is required!' },
+    name: { type: String, required: 'Name is required!' },
     price: { type: Number, required: 'Price is required!' },
     dishes: [{ type: String, ref: 'Dish', required: 'Dishes is required!' }],
     image: { type: String }

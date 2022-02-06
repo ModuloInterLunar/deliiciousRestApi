@@ -1,6 +1,8 @@
+const {capitalize} = require('../../../utils');
+
 const updateOne = async (req, res) => {
     if (req.body._id) res.ingredient._id = req.body.id;
-    if (req.body.name) res.ingredient.name = req.body.name;
+    if (req.body.name) res.ingredient.name = capitalize(req.body.name);
     if (req.body.quantity) res.ingredient.quantity = req.body.quantity;
     if (req.body.measure) res.ingredient.measure = req.body.measure;
     try {

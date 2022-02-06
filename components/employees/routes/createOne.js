@@ -1,6 +1,7 @@
 const Employee = require('../../../models/employee');
 const bcrypt = require('bcrypt');
 const services = require('../../../mongoose/services');
+const {capitalize} = require('../../../utils');
 
 const createOne = async (req, res) => {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -9,8 +10,8 @@ const createOne = async (req, res) => {
         _id: req.body.id,
         username: req.body.username,
         dni: req.body.dni,
-        name: req.body.name,
-        surname: req.body.surname,
+        name: capitalize(req.body.name),
+        surname: capitalize(req.body.surname),
         password: hashedPassword,
         isAdmin: req.body.isAdmin
     });

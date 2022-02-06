@@ -1,11 +1,14 @@
 const Menu = require('../../../models/menu');
 const services = require('../../../mongoose/services');
 const populater = require('../settings/populater');
+const {capitalize} = require('../../../utils');
+
 
 const createOne = async (req, res) => {
     if (!req.body.id) req.body.id = await services.generateId(Menu);
     const menu = new Menu({
         _id: req.body.id,
+        name: capitalize(req.body.name),
         price: req.body.price,
         dishes: req.body.dishes,
         image: req.body.image
