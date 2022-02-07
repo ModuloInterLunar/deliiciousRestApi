@@ -14,8 +14,7 @@ authorization: bearer {{token}}
     "posX": 0.546,
     "posY": 0.4215,
     "width": 30,
-    "height": 30,
-    "actualTicket": "2"
+    "height": 30
 }
 ###
 
