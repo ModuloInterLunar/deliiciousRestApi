@@ -9,10 +9,10 @@ authorization: bearer {{token}}
 
 {
     "password": "12345",
-    "username": "matalacabras",
-    "name": "mataas",
+    "username": "alvaro",
+    "name": "alvaro",
     "dni": "45454545D",
-    "surname": "Nuevo",
+    "surname": "el Admin",
     "isAdmin": true
 }
 ###

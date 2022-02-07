@@ -10,7 +10,7 @@ const createOne = async (req, res) => {
         posY: req.body.posY,
         width: req.body.width,
         height: req.body.height,
-        actualTicket: req.body.actualTicket ? req.body.actualTicket : null
+        actualTicket: req.body.actualTicket ? req.body.actualTicket : undefined
     });
 
     try {

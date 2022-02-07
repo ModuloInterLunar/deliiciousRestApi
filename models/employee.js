@@ -7,7 +7,7 @@ const opts = {
 
 const employeeSchema = new mongoose.Schema({
     _id: { type: String, required: true },
-    username: { type: String, trim: true, required: 'Username is required!', unique: "Username already in use" },
+    username: { type: String, trim: true, required: 'Username is required!', unique: true },
     dni: {
         type: String,
         required: 'DNI is required!',

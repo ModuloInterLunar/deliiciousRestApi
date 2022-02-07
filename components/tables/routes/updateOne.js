@@ -6,7 +6,7 @@ const updateOne = async (req, res) => {
     if (req.body.posY) res.table.posY = req.body.posY;
     if (req.body.width) res.table.width = req.body.width;
     if (req.body.height) res.table.height = req.body.height;
-    res.table.actualTicket = req.body.actualTicket; // no pongo el if aquí, porque sino, no se vacía el campo al poner actualTicket = null
+    res.table.actualTicket = req.body.actualTicket ? req.body.actualTicket : undefined; // no pongo el if aquí, porque sino, no se vacía el campo al poner actualTicket = null
     
     try {
         const updatedTable = await res.table.save();

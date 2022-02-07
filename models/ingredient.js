@@ -6,7 +6,7 @@ const opts = {
 
 const ingredientSchema = new mongoose.Schema({
     _id: { type: String, required: 'Id is required!' },
-    name: { type: String, trim: true, required: 'Name is required!', unique: 'Name already in use!' },
+    name: { type: String, trim: true, required: 'Name is required!', unique: true },
     quantity: { type: Number, required: 'Quantity is required!' },
     measure: { type: String, trim: true, default: 'uds.'}
 }, opts);
