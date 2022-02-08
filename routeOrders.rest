@@ -9,7 +9,7 @@ authorization: bearer {{token}}
 {
     "ticket": "1",
     "dish": "1",
-    "hasBeenCoocked": false,
+    "hasBeenCooked": false,
     "hasBeenServed": false,
     "isIncluded": false,
     "description": "",
@@ -18,15 +18,26 @@ authorization: bearer {{token}}
 }
 ###
 
-PATCH http://localhost:8080/api/orders/1
+PATCH http://localhost:8080/api/orders/2
 Content-Type: application/json
 authorization: bearer {{token}}
 
 {
-    "dish": "1",
-    "table": "1"
+    "hasBeenCooked": true
 }
 ###
 
 DELETE http://localhost:8080/api/orders/1
 authorization: bearer {{token}}
+
+
+###
+
+GET http://localhost:8080/api/orders/notserved
+authorization: bearer {{token}}
+###
+
+
+GET http://localhost:8080/api/orders/cookednotserved
+authorization: bearer {{token}}
+###

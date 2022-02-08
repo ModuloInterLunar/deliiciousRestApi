@@ -7,7 +7,7 @@ const updateOne = async (req, res) => {
     if (req.body.employee) res.order.employee = req.body.employee;
     if (req.body.dish) res.order.dish = req.body.dish;
     if (req.body.table) res.order.table = req.body.table;
-    if (req.body.hasBeenCoocked) res.order.hasBeenCoocked = req.body.hasBeenCoocked;
+    if (req.body.hasBeenCooked) res.order.hasBeenCooked = req.body.hasBeenCooked;
     if (req.body.hasBeenServed) res.order.hasBeenServed = req.body.hasBeenServed;
     if (req.body.isIncluded) res.order.isIncluded = req.body.isIncluded;
     if (req.body.description) res.order.description = req.body.description;

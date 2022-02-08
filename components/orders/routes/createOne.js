@@ -11,7 +11,7 @@ const createOne = async (req, res) => {
         dish: req.body.dish,
         employee: req.body.employee,
         table: req.body.table,
-        hasBeenCoocked: req.body.hasBeenCoocked,
+        hasBeenCooked: req.body.hasBeenCooked,
         hasBeenServed: req.body.hasBeenServed,
         isIncluded: req.body.isIncluded,
         description: req.body.description,
