@@ -5,12 +5,14 @@ const getTicket = require('./middlewares/getTicket');
 const getTicketPopulated = require('./middlewares/getTicketPopulated');
 
 const getAll = require('./routes/getAll');
+const getAllPaid = require('./routes/getAllPaid');
 const getOne = require('./routes/getOne');
 const createOne = require('./routes/createOne');
 const updateOne = require('./routes/updateOne');
 const deleteOne = require('./routes/deleteOne');
 
 router.get('/', getAll);
+router.get('/paid', getAllPaid);
 router.get('/:id', getTicketPopulated, getOne);
 router.post('/', createOne);
 router.patch('/:id', getTicket, updateOne);
