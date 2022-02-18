@@ -7,6 +7,12 @@ const auth = require('./middlewares/auth');
 
 const app = express();
 
+const dir = 'logs';
+
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
+
 const logFile = 'logs/access.log';
 if (!fs.existsSync(logFile)) fs.appendFileSync(logFile, '');
 
