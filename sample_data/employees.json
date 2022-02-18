@@ -1,0 +1,31 @@
+[{
+  "_id": "4",
+  "username": "admin",
+  "dni": "48985423D",
+  "name": "Juan",
+  "surname": "García",
+  "password": "$2b$10$TWE8zAR2OZtPzNjjSRN5qe1vjIxZtq0b/7BlDWBx0D7DQ1WnZWTfa",
+  "isAdmin": true,
+  "createdAt": {
+    "$date": "2022-02-18T14:51:22.193Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-18T14:51:22.193Z"
+  },
+  "__v": 0
+},{
+  "_id": "5",
+  "username": "pepe",
+  "dni": "85989323D",
+  "name": "Pepe",
+  "surname": "Ruíz",
+  "password": "$2b$10$TnQcowTcEUbKranZQg38zeFuHw3LYLQE6wL0iVZBLOL8jolkSdVfO",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2022-02-18T14:52:58.313Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-18T14:52:58.313Z"
+  },
+  "__v": 0
+}]
