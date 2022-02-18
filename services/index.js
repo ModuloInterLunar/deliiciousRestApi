@@ -8,13 +8,13 @@ function createToken (user) {
         exp: moment().add(2, 'months').unix()
     }
 
-    return jwt.encode(payload, process.env.SECRET_TOKEN);
+    return jwt.encode(payload, process.env.SECRET_TOKEN || "123456");
 }
 
 function decodeToken (token) {
     const decoded = new Promise((resolve, reject) => {
         try {
-            const payload = jwt.decode(token, process.env.SECRET_TOKEN);
+            const payload = jwt.decode(token, process.env.SECRET_TOKEN || "123456");
 
             if (payload.exp <= moment().unix()) {
                 reject({
