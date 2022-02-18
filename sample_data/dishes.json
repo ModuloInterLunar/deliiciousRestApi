@@ -1,0 +1,414 @@
+[{
+  "_id": "1",
+  "name": "Hamburger",
+  "type": "Food",
+  "price": 7,
+  "description": "Hamburguesa de carne con salsa",
+  "__v": 3,
+  "image": "https://media.istockphoto.com/photos/cheeseburger-isolated-on-white-picture-id1157515115?k=20&m=1157515115&s=612x612&w=0&h=1-tuF1ovimw3DuivpApekSjJXN5-vc97-qBY5EBOUts=",
+  "ingredientQties": [
+    {
+      "ingredient": "3",
+      "quantity": 100,
+      "_id": {
+        "$oid": "620e56275a19779fc184ed72"
+      }
+    },
+    {
+      "ingredient": "4",
+      "quantity": 20,
+      "_id": {
+        "$oid": "620e56275a19779fc184ed73"
+      }
+    },
+    {
+      "ingredient": "5",
+      "quantity": 10,
+      "_id": {
+        "$oid": "620e56275a19779fc184ed74"
+      }
+    },
+    {
+      "ingredient": "17",
+      "quantity": 1,
+      "_id": {
+        "$oid": "620e56275a19779fc184ed75"
+      }
+    }
+  ]
+},{
+  "_id": "2",
+  "name": "Fanta de Naranja",
+  "type": "Drink",
+  "price": 2.5,
+  "description": "Lata fanta de naranja 33cl",
+  "__v": 3,
+  "image": "https://www.encopadebalon.com/3497-large_default/fanta-naranja-pack-24-unidades-33cl.jpg",
+  "ingredientQties": [
+    {
+      "ingredient": "6",
+      "quantity": 1,
+      "_id": {
+        "$oid": "6204883cac0f4e093e790e50"
+      }
+    }
+  ]
+},{
+  "_id": "9",
+  "name": "Coca-Cola",
+  "type": "Drink",
+  "ingredientQties": [
+    {
+      "ingredient": "24",
+      "quantity": 1,
+      "_id": {
+        "$oid": "62084f476af27fa0ce9550fc"
+      }
+    }
+  ],
+  "price": 2.5,
+  "description": "Coca-Cola Lata 33cl",
+  "image": "https://distribucionescantarerosierra.es/wp-content/uploads/2020/07/0666-1-768x768.jpg",
+  "__v": 4
+},{
+  "_id": "10",
+  "name": "Empanadillas de Atún",
+  "type": "Food",
+  "ingredientQties": [
+    {
+      "ingredient": "15",
+      "quantity": 4,
+      "_id": {
+        "$oid": "620122fa066f5092226315f6"
+      }
+    },
+    {
+      "ingredient": "1",
+      "quantity": 1,
+      "_id": {
+        "$oid": "620122fa066f5092226315f7"
+      }
+    },
+    {
+      "ingredient": "16",
+      "quantity": 2,
+      "_id": {
+        "$oid": "620122fa066f5092226315f8"
+      }
+    },
+    {
+      "ingredient": "14",
+      "quantity": 200,
+      "_id": {
+        "$oid": "620122fa066f5092226315f9"
+      }
+    },
+    {
+      "ingredient": "13",
+      "quantity": 200,
+      "_id": {
+        "$oid": "620122fa066f5092226315fa"
+      }
+    }
+  ],
+  "price": 7.4,
+  "description": "4 Empanadillas de atún",
+  "image": "https://web-cdne-lasirena-prod.azureedge.net/5447-product_ficha/empanadillas-de-atun.jpg",
+  "__v": 2
+},{
+  "_id": "11",
+  "name": "Macarrones",
+  "type": "Food",
+  "ingredientQties": [
+    {
+      "ingredient": "3",
+      "quantity": 100,
+      "_id": {
+        "$oid": "62011891066f50922262fd10"
+      }
+    },
+    {
+      "ingredient": "9",
+      "quantity": 200,
+      "_id": {
+        "$oid": "62011891066f50922262fd11"
+      }
+    },
+    {
+      "ingredient": "11",
+      "quantity": 20,
+      "_id": {
+        "$oid": "62011891066f50922262fd12"
+      }
+    },
+    {
+      "ingredient": "13",
+      "quantity": 80,
+      "_id": {
+        "$oid": "6201195e47dcf16a81fe8209"
+      }
+    }
+  ],
+  "price": 7.5,
+  "description": "Macarrones boloñesa con queso en polvo",
+  "image": "https://cdn6.recetasdeescandalo.com/wp-content/uploads/2020/04/Macarrones-con-atun-y-tomate.-Receta-de-pasta-rica-y-facil-para-triunfar.jpg",
+  "__v": 0
+},{
+  "_id": "12",
+  "name": "Tortilla de patatas",
+  "type": "Food",
+  "ingredientQties": [
+    {
+      "ingredient": "5",
+      "quantity": 0.5,
+      "_id": {
+        "$oid": "62012441066f509222632231"
+      }
+    },
+    {
+      "ingredient": "7",
+      "quantity": 2,
+      "_id": {
+        "$oid": "62012441066f509222632232"
+      }
+    },
+    {
+      "ingredient": "8",
+      "quantity": 4,
+      "_id": {
+        "$oid": "62012441066f509222632233"
+      }
+    },
+    {
+      "ingredient": "18",
+      "quantity": 250,
+      "_id": {
+        "$oid": "62012441066f509222632234"
+      }
+    }
+  ],
+  "price": 6,
+  "description": "Tortilla de patatas",
+  "image": "https://www.cocinaabuenashoras.com/files/tortilla-de-patatas-espanola.jpg",
+  "__v": 2
+},{
+  "_id": "13",
+  "name": "Pizza",
+  "type": "Food",
+  "ingredientQties": [
+    {
+      "ingredient": "13",
+      "quantity": 30,
+      "_id": {
+        "$oid": "6204846eac0f4e093e7857a2"
+      }
+    },
+    {
+      "ingredient": "20",
+      "quantity": 1,
+      "_id": {
+        "$oid": "6204846eac0f4e093e7857a3"
+      }
+    },
+    {
+      "ingredient": "19",
+      "quantity": 10,
+      "_id": {
+        "$oid": "6204846eac0f4e093e7857a4"
+      }
+    }
+  ],
+  "price": 7.25,
+  "description": "Pizza clásica",
+  "image": "https://irecetasfaciles.com/wp-content/uploads/2019/08/pizza-de-jamon-queso-y-tocino.jpg",
+  "__v": 1
+},{
+  "_id": "14",
+  "name": "Lasaña",
+  "type": "Food",
+  "ingredientQties": [
+    {
+      "ingredient": "3",
+      "quantity": 200,
+      "_id": {
+        "$oid": "6204853cac0f4e093e788041"
+      }
+    },
+    {
+      "ingredient": "5",
+      "quantity": 1,
+      "_id": {
+        "$oid": "6204853cac0f4e093e788042"
+      }
+    },
+    {
+      "ingredient": "13",
+      "quantity": 300,
+      "_id": {
+        "$oid": "6204853cac0f4e093e788043"
+      }
+    },
+    {
+      "ingredient": "18",
+      "quantity": 50,
+      "_id": {
+        "$oid": "6204853cac0f4e093e788044"
+      }
+    }
+  ],
+  "price": 9.5,
+  "description": "Lasaña original italiana",
+  "image": "https://saboryestilo.com.mx/wp-content/uploads/elementor/thumbs/recetas-de-cocina-lasana-oosqpb4rtcdx9cv8s46v8rj12kdic1hfsy2wfkuvk0.jpg",
+  "__v": 2
+},{
+  "_id": "15",
+  "name": "Nestea",
+  "type": "Drink",
+  "ingredientQties": [
+    {
+      "ingredient": "22",
+      "quantity": 1,
+      "_id": {
+        "$oid": "620485a4ac0f4e093e788da0"
+      }
+    }
+  ],
+  "price": 2.5,
+  "description": "Nestea lata 33cl",
+  "image": "https://distribucionescantarerosierra.es/wp-content/uploads/2020/07/000088_00_1-768x768.jpg",
+  "__v": 1
+},{
+  "_id": "16",
+  "name": "Agua",
+  "type": "Drink",
+  "ingredientQties": [
+    {
+      "ingredient": "23",
+      "quantity": 1,
+      "_id": {
+        "$oid": "6204879cac0f4e093e78b2b4"
+      }
+    }
+  ],
+  "price": 1,
+  "description": "Botella de agua de 1L",
+  "image": "https://lafuente.es/wp-content/uploads/2019/10/AGUA-FONT-DOR-MAXIUM-1L.jpg",
+  "__v": 6
+},{
+  "_id": "17",
+  "name": "Huevos revueltos",
+  "type": "Food",
+  "ingredientQties": [
+    {
+      "ingredient": "1",
+      "quantity": 1,
+      "_id": {
+        "$oid": "620fa16666b0f9c67602b080"
+      }
+    },
+    {
+      "ingredient": "7",
+      "quantity": 3,
+      "_id": {
+        "$oid": "620fa16666b0f9c67602b081"
+      }
+    },
+    {
+      "ingredient": "16",
+      "quantity": 1,
+      "_id": {
+        "$oid": "620fa16666b0f9c67602b082"
+      }
+    },
+    {
+      "ingredient": "18",
+      "quantity": 50,
+      "_id": {
+        "$oid": "620fa16666b0f9c67602b083"
+      }
+    }
+  ],
+  "price": 4.9,
+  "description": "Huevos revueltos salteados",
+  "image": "https://okdiario.com/img/2021/02/05/huevos-revueltos-1.jpg",
+  "__v": 1
+},{
+  "_id": "18",
+  "name": "Sandwich de Atún",
+  "type": "Food",
+  "ingredientQties": [
+    {
+      "ingredient": "10",
+      "quantity": 1,
+      "_id": {
+        "$oid": "620fa31066b0f9c67602d586"
+      }
+    },
+    {
+      "ingredient": "14",
+      "quantity": 100,
+      "_id": {
+        "$oid": "620fa31066b0f9c67602d587"
+      }
+    },
+    {
+      "ingredient": "25",
+      "quantity": 20,
+      "_id": {
+        "$oid": "620fa31066b0f9c67602d588"
+      }
+    },
+    {
+      "ingredient": "26",
+      "quantity": 3,
+      "_id": {
+        "$oid": "620fa31066b0f9c67602d589"
+      }
+    },
+    {
+      "ingredient": "27",
+      "quantity": 2,
+      "_id": {
+        "$oid": "620fa31066b0f9c67602d58a"
+      }
+    }
+  ],
+  "price": 5,
+  "description": "Sandwich de atún con mayonesa, lechuga y tomate",
+  "image": "https://assets.unileversolutions.com/recipes-v2/219970.jpg",
+  "__v": 2
+},{
+  "_id": "19",
+  "name": "Cruzcampo",
+  "type": "Drink",
+  "ingredientQties": [
+    {
+      "ingredient": "28",
+      "quantity": 1,
+      "_id": {
+        "$oid": "620fa3a966b0f9c67602e30b"
+      }
+    }
+  ],
+  "price": 1.5,
+  "description": "Cruzcampo",
+  "image": "https://m.media-amazon.com/images/I/61+vFm+ugCL._AC_SL1500_.jpg",
+  "__v": 0
+},{
+  "_id": "20",
+  "name": "Mahou",
+  "type": "Drink",
+  "ingredientQties": [
+    {
+      "ingredient": "29",
+      "quantity": 1,
+      "_id": {
+        "$oid": "620fa42066b0f9c67602edbd"
+      }
+    }
+  ],
+  "price": 1.5,
+  "description": "Mahou",
+  "image": "https://www.viguisa.es/4039/cerveza-mahou-5-estrellas-24-latas.jpg",
+  "__v": 2
+}]

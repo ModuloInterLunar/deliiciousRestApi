@@ -1,0 +1,177 @@
+[{
+  "_id": "1",
+  "name": "Sal",
+  "price": 1,
+  "quantity": 1932,
+  "__v": 0,
+  "measure": "g"
+},{
+  "_id": "2",
+  "name": "Azucar",
+  "price": 1,
+  "quantity": 4999992860,
+  "__v": 0,
+  "measure": "g"
+},{
+  "_id": "3",
+  "name": "Carne",
+  "quantity": 23200,
+  "__v": 0,
+  "measure": "g"
+},{
+  "_id": "4",
+  "name": "Queso",
+  "quantity": 1620,
+  "__v": 0,
+  "measure": "g"
+},{
+  "_id": "5",
+  "name": "Cebolla",
+  "quantity": 3267.5,
+  "__v": 0,
+  "measure": "uds."
+},{
+  "_id": "6",
+  "name": "Fanta de naranja",
+  "quantity": 4931,
+  "__v": 0,
+  "measure": "uds."
+},{
+  "_id": "7",
+  "name": "Huevo",
+  "quantity": 895,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "8",
+  "name": "Patata",
+  "quantity": 9796,
+  "measure": "g",
+  "__v": 0
+},{
+  "_id": "9",
+  "name": "Macarrones",
+  "quantity": 490000,
+  "measure": "g",
+  "__v": 0
+},{
+  "_id": "10",
+  "name": "Tomate",
+  "quantity": 8999,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "11",
+  "name": "Queso en polvo",
+  "quantity": 7660,
+  "measure": "g",
+  "__v": 0
+},{
+  "_id": "12",
+  "name": "Carne picada",
+  "quantity": 10000,
+  "measure": "g",
+  "__v": 0
+},{
+  "_id": "13",
+  "name": "Tomate frito",
+  "quantity": 4990560,
+  "measure": "ml",
+  "__v": 0
+},{
+  "_id": "14",
+  "name": "Atún",
+  "quantity": 47500,
+  "measure": "g",
+  "__v": 0
+},{
+  "_id": "15",
+  "name": "Hojaldre",
+  "quantity": 1764,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "16",
+  "name": "Ajo",
+  "quantity": 473,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "17",
+  "name": "Pan de Hamburguesa",
+  "quantity": 3978,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "18",
+  "name": "Leche",
+  "quantity": 890750,
+  "measure": "ml",
+  "__v": 0
+},{
+  "_id": "19",
+  "name": "Queso rallado",
+  "quantity": 850,
+  "measure": "g",
+  "__v": 0
+},{
+  "_id": "20",
+  "name": "Masa pizza",
+  "quantity": 485,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "21",
+  "name": "Pasta para lasaña",
+  "quantity": 500,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "22",
+  "name": "Nestea lata",
+  "quantity": 293,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "23",
+  "name": "Agua Botella 1L",
+  "quantity": 295,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "24",
+  "name": "Coca-Cola",
+  "quantity": 12268,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "25",
+  "name": "Mayonesa",
+  "quantity": 2980,
+  "measure": "ml",
+  "__v": 0
+},{
+  "_id": "26",
+  "name": "Lechuga",
+  "quantity": 49997,
+  "measure": "g",
+  "__v": 0
+},{
+  "_id": "27",
+  "name": "Pan",
+  "quantity": 498,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "28",
+  "name": "Cruzcampo",
+  "quantity": 499,
+  "measure": "uds.",
+  "__v": 0
+},{
+  "_id": "29",
+  "name": "Mahou",
+  "quantity": 310,
+  "measure": "uds.",
+  "__v": 0
+}]
